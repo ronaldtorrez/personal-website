@@ -1,0 +1,44 @@
+---
+interface Props {
+	class?: string;
+	date?: Date | string;
+}
+
+const { class: className = "text-6xl md:text-8xl font-extrabold", date } = Astro.props;
+---
+
+<span class={`short-date ${className}`} data-date={date ? new Date(date).toISOString() : new Date()}></span>
+
+<script>
+	(function () {
+		const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+		const format = (d: Date) => `${months[d.getMonth()]}'${String(d.getDate()).padStart(2, "0")}`;
+
+		const updateAll = () => {
+			document.querySelectorAll(".short-date").forEach((el) => {
+				const elem = el as HTMLElement;
+				const dateAttr = elem.dataset.date;
+				const initial = dateAttr ? new Date(dateAttr) : new Date();
+
+				if (isNaN(initial.getTime())) return;
+
+				el.textContent = format(initial);
+			});
+		};
+
+		updateAll();
+
+		const scheduleNextTick = () => {
+			const now = new Date();
+			const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+			const msUntilMidnight = nextMidnight.getTime() - now.getTime();
+
+			setTimeout(() => {
+				updateAll();
+				scheduleNextTick();
+			}, msUntilMidnight);
+		};
+
+		scheduleNextTick();
+	})();
+</script>

@@ -1,1 +1,12 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+	--font-montserrat: 'Montserrat', sans-serif;
+	--default-font-family: var(--font-montserrat);
+}
+
+section {
+	@apply flex flex-col w-full p-8 gap-8;
+}

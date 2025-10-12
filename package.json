@@ -13,5 +13,14 @@
 		"astro": "^5.14.3",
 		"phosphor-astro": "^2.1.0",
 		"tailwindcss": "^4.1.14"
+	},
+	"devDependencies": {
+		"prettier": "3.6.2",
+		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-css-order": "^2.1.2",
+		"prettier-plugin-organize-attributes": "^1.0.0",
+		"prettier-plugin-organize-imports": "^4.3.0",
+		"prettier-plugin-sort-imports": "^1.8.8",
+		"prettier-plugin-tailwindcss": "0.6.14"
 	}
 }

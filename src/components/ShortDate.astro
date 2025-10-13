@@ -4,7 +4,7 @@ interface Props {
 	date?: Date | string;
 }
 
-const { class: className = "text-6xl md:text-8xl font-extrabold", date } = Astro.props;
+const { class: className, date } = Astro.props;
 ---
 
 <span class={`short-date ${className}`} data-date={date ? new Date(date).toISOString() : new Date()}></span>

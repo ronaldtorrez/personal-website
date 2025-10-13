@@ -12,9 +12,9 @@ import ShortDate from "@components/ShortDate.astro";
 	</h1>
 	<div class="grid w-full items-end gap-10 sm:grid-cols-2 md:gap-20 lg:grid-cols-3">
 		<div class="sm:col-span-2 lg:col-span-1">
-			<Quotes class="hidden size-40 rotate-180 lg:block" />
+			<Quotes class="mb-10 hidden size-40 rotate-180 lg:block" />
 			<div class="flex flex-col items-center gap-6 lg:items-start">
-				<p class="px-8 text-center text-xl font-medium text-gray-600 lg:px-0 lg:pr-8 lg:text-left">
+				<p class="px-8 text-center text-xl font-medium text-gray-600 md:text-2xl lg:px-0 lg:pr-8 lg:text-left">
 					Open to job opportunities worldwide. Passionate about building polished, intuitive, and thoughtful
 					digital experiences that leave a mark.
 				</p>
@@ -27,12 +27,10 @@ import ShortDate from "@components/ShortDate.astro";
 			</div>
 		</div>
 		<Picture src={photo} alt="Photo of me" />
-		<div class="">
-			<p class="text-right text-xl">
-				Work Together, today
-				<br />
-				<ShortDate />
-			</p>
-		</div>
+		<p class="text-right text-xl font-medium text-gray-600 md:text-2xl">
+			Work Together, today
+			<br />
+			<ShortDate class="text-6xl font-extrabold text-black md:text-8xl" />
+		</p>
 	</div>
 </section>

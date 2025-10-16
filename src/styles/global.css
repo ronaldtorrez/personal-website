@@ -8,5 +8,5 @@
 }
 
 @utility container {
-	@apply mx-auto p-5 md:p-8;
+	@apply mx-auto flex flex-col gap-8 p-5 md:p-8;
 }

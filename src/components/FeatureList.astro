@@ -45,7 +45,7 @@ const { number, title, description, items } = Props
 	const containers = Array.from(document.querySelectorAll<HTMLElement>(LIST_CONTENT))
 
 	let prevTitleHeight = 0
-	let prevTopHeight = getCssPropValue(containers[0], "top")
+	let prevTop = getCssPropValue(containers[0], "top")
 
 	const maxContainerHeight = containers.reduce((previousValue, currentValue) => {
 		const containerHeight = currentValue.offsetHeight
@@ -60,12 +60,12 @@ const { number, title, description, items } = Props
 		const title = container.querySelector<HTMLElement>(LIST_TITLE)
 		const titleHeight = title ? getCssPropValue(title, "height") : 0
 
-		const nextTopHeight = prevTopHeight + prevTitleHeight
+		const nextTop = prevTop + prevTitleHeight
 
-		container.style.top = `${nextTopHeight}px`
-		container.style.marginBottom = `${containerMarginBottom - nextTopHeight}px`
+		container.style.top = `${nextTop}px`
+		container.style.marginBottom = `${containerMarginBottom - nextTop}px`
 
-		prevTopHeight = nextTopHeight
+		prevTop = nextTop
 		prevTitleHeight = titleHeight
 	})
 </script>

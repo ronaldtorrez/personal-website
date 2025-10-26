@@ -5,12 +5,56 @@
 @theme {
 	--font-montserrat: "Montserrat", sans-serif;
 	--default-font-family: var(--font-montserrat);
+
+	--text-h1: clamp(4rem, 7vw + 1rem, 10rem);
+	--text-h2: clamp(3rem, 5vw + 1rem, 8rem);
+	--text-h3: clamp(1.5rem, 3vw + 1rem, 4rem);
+
+	--text-list-item: clamp(1.25rem, 2vw + 0.5rem, 1.5rem);
 }
 
 @utility container {
-	@apply mx-auto flex flex-col gap-8 p-5 md:p-8;
+	@apply mx-auto flex flex-col gap-8;
+}
+
+@utility grid {
+	@apply gap-4;
+}
+
+@utility flex {
+	@apply gap-4;
 }
 
 section {
-	@apply flex flex-col gap-8 p-5 md:p-8;
+	@apply flex w-full flex-col gap-8 p-6 md:p-20;
+}
+
+html,
+body {
+	@apply text-lg font-medium text-gray-600;
+}
+
+h1 {
+	@apply text-h1;
+}
+
+h2 {
+	@apply text-h2;
+}
+
+h3 {
+	@apply text-h3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-extrabold;
+}
+
+ol {
+	@apply list-inside list-decimal;
 }

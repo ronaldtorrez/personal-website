@@ -1,5 +1,5 @@
 ---
-import List from "./List.astro";
+import FeatureList from "./FeatureList.js";
 ---
 
 <section class="min-h-full rounded-t-4xl bg-black py-10 pb-80 font-medium text-gray-400 lg:py-20">
@@ -14,13 +14,13 @@ import List from "./List.astro";
 			</p>
 		</div>
 
-		<List
+		<FeatureList
 			number="01"
 			title="Frontend Development"
 			description="Creating responsive and engaging user interfaces using modern frameworks and best practices."
 			items={["Responsive Web Design", "Single Page Applications (SPA)", "Progressive Web Apps (PWA)"]}
 		/>
-		<List
+		<FeatureList
 			number="02"
 			title="Backend Development"
 			description="Building robust server-side applications and APIs to handle data and business logic efficiently."
@@ -31,7 +31,7 @@ import List from "./List.astro";
 				"Serverless Architecture",
 			]}
 		/>
-		<List
+		<FeatureList
 			number="03"
 			title="Full-Stack Development"
 			description="Combining frontend and backend expertise to deliver complete web solutions from concept to deployment."

@@ -1,18 +1,18 @@
 ---
-import { z } from "astro:content";
+import { z } from "astro:content"
 
 const Schema = z.object({
 	number: z.string(),
 	title: z.string(),
 	description: z.string(),
 	items: z.array(z.string()),
-});
+})
 
-type Props = z.infer<typeof Schema>;
+type Props = z.infer<typeof Schema>
 
-const Props = Schema.parse(Astro.props as Props);
+const Props = Schema.parse(Astro.props as Props)
 
-const { number, title, description, items } = Props;
+const { number, title, description, items } = Props
 ---
 
 <article class="list-content sticky top-20 mb-150 border-t bg-black">
@@ -37,47 +37,35 @@ const { number, title, description, items } = Props;
 </article>
 
 <script>
-	const LIST_CONTENT = ".list-content";
-	const LIST_TITLE = ".list-title";
+	import { getCssPropValue } from "@utils/css.ts"
 
-	const camelToKebab = (s: string) => s.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);
-	function getCssPropValue(el: HTMLElement, property: keyof CSSStyleDeclaration): number {
-		const cssProp = camelToKebab(String(property));
-		const raw = getComputedStyle(el).getPropertyValue(cssProp);
-		const val = parseFloat(raw);
-		return Number.isFinite(val) ? val : 0;
-	}
+	const LIST_CONTENT = ".list-content"
+	const LIST_TITLE = ".list-title"
 
-	const containers = Array.from(document.querySelectorAll<HTMLElement>(LIST_CONTENT));
+	const containers = Array.from(document.querySelectorAll<HTMLElement>(LIST_CONTENT))
 
-	let prevTitleHeight = containers[0]?.querySelector<HTMLElement>(LIST_TITLE)?.offsetHeight || 0;
-	let prevTopHeight = getCssPropValue(containers[0], "top");
+	let prevTitleHeight = 0
+	let prevTopHeight = getCssPropValue(containers[0], "top")
 
-	const firstContainerMarginBottom = getCssPropValue(containers[0], "marginBottom");
-
-	containers[0].style.marginBottom = `${firstContainerMarginBottom - prevTopHeight}px`;
-
-	const maxContainerHeight = containers.reduce((max, container) => {
-		const containerHeight = container.offsetHeight;
-		return containerHeight > max ? containerHeight : max;
-	}, 0);
+	const maxContainerHeight = containers.reduce((previousValue, currentValue) => {
+		const containerHeight = currentValue.offsetHeight
+		return containerHeight > previousValue ? containerHeight : previousValue
+	}, 0)
 
 	containers.forEach((container) => {
-		container.style.minHeight = `${maxContainerHeight}px`;
-	});
+		container.style.minHeight = `${maxContainerHeight}px`
 
-	for (let i = 1; i < containers.length; i++) {
-		const container = containers[i];
-		const containerMarginBottom = getCssPropValue(container, "marginBottom");
-		const title = container.querySelector<HTMLElement>(LIST_TITLE);
-		const titleHeight = title ? getCssPropValue(title, "height") : 0;
+		const containerMarginBottom = getCssPropValue(container, "marginBottom")
 
-		const nextTopHeight = prevTopHeight + prevTitleHeight;
+		const title = container.querySelector<HTMLElement>(LIST_TITLE)
+		const titleHeight = title ? getCssPropValue(title, "height") : 0
 
-		container.style.top = `${nextTopHeight}px`;
-		container.style.marginBottom = `${containerMarginBottom - nextTopHeight}px`;
+		const nextTopHeight = prevTopHeight + prevTitleHeight
 
-		prevTopHeight = nextTopHeight;
-		prevTitleHeight = titleHeight;
-	}
+		container.style.top = `${nextTopHeight}px`
+		container.style.marginBottom = `${containerMarginBottom - nextTopHeight}px`
+
+		prevTopHeight = nextTopHeight
+		prevTitleHeight = titleHeight
+	})
 </script>

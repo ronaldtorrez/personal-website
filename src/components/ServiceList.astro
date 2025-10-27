@@ -5,7 +5,7 @@ const Schema = z.object({
 	number: z.string(),
 	title: z.string(),
 	description: z.string(),
-	items: z.array(z.string()),
+	items: z.array(z.string())
 })
 
 type Props = z.infer<typeof Schema>
@@ -26,7 +26,7 @@ const { number, title, description, items } = Props
 			<p>{description}</p>
 
 			<ol class="text-list-item divide-y font-bold">
-				{items.map((item) => <li class="py-2 md:py-4">{item}</li>)}
+				{items.map(item => <li class="py-2 md:py-4">{item}</li>)}
 			</ol>
 		</div>
 	</div>

@@ -1,13 +1,13 @@
 ---
-import { Picture } from "astro:assets"
+import { Picture } from 'astro:assets'
 
-import ShortDate from "@components/ShortDate.astro"
-import Navbar from "@components/NavBar.astro"
+import ShortDate from '@components/ShortDate.astro'
+import Navbar from '@components/NavBar.astro'
 
-import headerImg from "@assets/header-img.webp"
+import headerImg from '@assets/header-img.webp'
 
-import Quotes from "phosphor-astro/QuotesDuotone.astro"
-import ArrowUpRight from "phosphor-astro/ArrowUpRightDuotone.astro"
+import Quotes from 'phosphor-astro/QuotesDuotone.astro'
+import ArrowUpRight from 'phosphor-astro/ArrowUpRightDuotone.astro'
 ---
 
 <section class="flex min-h-screen flex-col items-center justify-center !gap-20 bg-slate-200">
@@ -34,7 +34,11 @@ import ArrowUpRight from "phosphor-astro/ArrowUpRightDuotone.astro"
 				</div>
 			</div>
 
-			<Picture src={headerImg} alt="Photo of me" class="brightness rounded-md grayscale" />
+			<Picture
+				src={headerImg}
+				alt="Photo of me"
+				class="brightness rounded-md grayscale"
+			/>
 
 			<p class="text-right md:text-2xl">
 				Work Together, today

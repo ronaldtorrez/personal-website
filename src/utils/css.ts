@@ -1,4 +1,4 @@
-import { camelToKebab } from "@utils/case.ts"
+import { camelToKebab } from '@utils/case.ts'
 
 export const getCssPropValue = (el: HTMLElement, property: keyof CSSStyleDeclaration): number => {
 	const cssProp = camelToKebab(String(property))

@@ -1,11 +1,11 @@
 ---
-import { z } from "astro:content"
+import { z } from 'astro:content'
 
 const Schema = z.object({
 	number: z.string(),
 	title: z.string(),
 	description: z.string(),
-	items: z.array(z.string()),
+	items: z.array(z.string())
 })
 
 type Props = z.infer<typeof Schema>
@@ -26,35 +26,35 @@ const { number, title, description, items } = Props
 			<p>{description}</p>
 
 			<ol class="text-list-item divide-y font-bold">
-				{items.map((item) => <li class="py-2 md:py-4">{item}</li>)}
+				{items.map(item => <li class="py-2 md:py-4">{item}</li>)}
 			</ol>
 		</div>
 	</div>
 </article>
 
 <script>
-	import { getCssPropValue } from "@utils/css.ts"
+	import { getCssPropValue } from '@utils/css.ts'
 
-	const LIST_CONTENT = ".feature-content"
-	const LIST_TITLE = ".feature-title"
+	const LIST_CONTENT = '.feature-content'
+	const LIST_TITLE = '.feature-title'
 
 	const containers = Array.from(document.querySelectorAll<HTMLElement>(LIST_CONTENT))
 
 	let prevTitleHeight = 0
-	let prevTop = getCssPropValue(containers[0], "top")
+	let prevTop = getCssPropValue(containers[0], 'top')
 
 	const maxContainerHeight = containers.reduce((previousValue, currentValue) => {
 		const containerHeight = currentValue.offsetHeight
 		return containerHeight > previousValue ? containerHeight : previousValue
 	}, 0)
 
-	containers.forEach((container) => {
+	containers.forEach(container => {
 		container.style.minHeight = `${maxContainerHeight}px`
 
-		const containerMarginBottom = getCssPropValue(container, "marginBottom")
+		const containerMarginBottom = getCssPropValue(container, 'marginBottom')
 
 		const title = container.querySelector<HTMLElement>(LIST_TITLE)
-		const titleHeight = title ? getCssPropValue(title, "height") : 0
+		const titleHeight = title ? getCssPropValue(title, 'height') : 0
 
 		const nextTop = prevTop + prevTitleHeight
 

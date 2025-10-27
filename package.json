@@ -8,7 +8,7 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"prepare": "husky install",
-		"lint": "eslint --ext .astro,.js,.ts,.css --fix"
+		"lint": "eslint --ext .astro,.js,.ts,.css --fix && prettier --write ."
 	},
 	"dependencies": {
 		"@mux/mux-player-astro": "^3.7.0",

@@ -1,0 +1,33 @@
+---
+import { z } from 'astro:content'
+
+const Schema = z.object({
+	number: z.string(),
+	title: z.string(),
+	description: z.string(),
+	items: z.array(z.string()),
+})
+
+type Props = z.infer<typeof Schema>
+
+const Props = Schema.parse(Astro.props as Props)
+
+const { number, title, description, items } = Props
+---
+
+<article class="feature-content sticky top-20 mb-150 border-t bg-black">
+	<h3 class="feature-title py-8 text-gray-300 md:grid md:grid-cols-12">
+		<span>({number})</span>
+		<span class="md:col-span-7 md:col-start-6">{title}</span>
+	</h3>
+
+	<div class="md:grid md:grid-cols-12">
+		<div class="flex flex-col md:col-span-7 md:col-start-6">
+			<p>{description}</p>
+
+			<ol class="text-list-item divide-y font-bold">
+				{items.map((item) => <li class="py-2 md:py-4">{item}</li>)}
+			</ol>
+		</div>
+	</div>
+</article>

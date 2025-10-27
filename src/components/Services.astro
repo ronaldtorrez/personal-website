@@ -1,0 +1,60 @@
+---
+import { Picture } from 'astro:assets'
+import { MuxPlayer } from '@mux/mux-player-astro'
+
+import Project1Bg from '@assets/projects/project-1-bg.webp'
+---
+
+<section class="bg-black">
+	<div class="container">
+		<h2 class="text-gray-200">SELECTED WORKS /</h2>
+
+		<div class="mb-20 md:grid md:grid-cols-12">
+			<h3 class="text-gray-400 md:col-span-7 md:col-start-6">Projects</h3>
+
+			<p class="md:col-span-7 md:col-start-6">
+				Thoughtfully crafted digital experiences that blend utility and aesthetics into something functional,
+				memorable, and refined.
+			</p>
+		</div>
+
+		<article class="grid grid-cols-12">
+			<div class="col-span-5">
+				<span class="sticky top-0 text-[15rem] leading-none font-extrabold text-gray-400"> 01 </span>
+			</div>
+
+			<div class="col-span-7 col-start-6 flex flex-col">
+				<div
+					class="relative flex aspect-square items-center justify-center gap-0 overflow-clip rounded-2xl p-20"
+				>
+					<Picture
+						src={Project1Bg}
+						alt="Project 1 Background"
+						class="absolute top-0 left-0 h-full w-full object-cover object-center"
+					/>
+					<MuxPlayer
+						class="aspect-4/3 w-full overflow-clip rounded-2xl [--controls:none] [--play-button:none] [--volume-range:none]"
+						playbackId="azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8"
+						metadata={{
+							video_title: 'My Astro Video',
+						}}
+						poster="https://image.mux.com/azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8/thumbnail.png?time=0"
+						storyboardSrc="https://image.mux.com/azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8/storyboard.vtt?format=webp&asset_start_time=0&asset_end_time=20"
+						thumbnailTime={1}
+						theme="microvideo"
+						autoplay={true}
+						loop={true}
+						muted={true}
+						nohotkeys={true}
+					/>
+				</div>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto, consequatur doloribus
+					laborum magnam numquam voluptates! Consequatur consequuntur, culpa in inventore, magni nisi optio
+					quidem recusandae, tempore totam ullam vitae!
+				</p>
+			</div>
+		</article>
+	</div>
+</section>

@@ -3,6 +3,11 @@ import { Picture } from 'astro:assets'
 import { MuxPlayer } from '@mux/mux-player-astro'
 
 import Project1Bg from '@assets/projects/project-1-bg.webp'
+
+import Wordpress from '@assets/icons/wordpress.svg'
+import Woocommerce from '@assets/icons/woocommerce.svg'
+import Wpml from '@assets/icons/wpml.svg'
+import Elementor from '@assets/icons/elementor.svg'
 ---
 
 <section class="bg-black">
@@ -49,11 +54,34 @@ import Project1Bg from '@assets/projects/project-1-bg.webp'
 					/>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto, consequatur doloribus
-					laborum magnam numquam voluptates! Consequatur consequuntur, culpa in inventore, magni nisi optio
-					quidem recusandae, tempore totam ullam vitae!
-				</p>
+				<div>
+					<span>Modern Marketing Website</span>
+					<div class="flex items-center justify-between">
+						<h3 class="text-gray-400">NURA</h3>
+						<div class="flex">
+							<Wordpress
+								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
+								height={40}
+								width="auto"
+							/>
+							<Woocommerce
+								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
+								height={40}
+								width="auto"
+							/>
+							<Wpml
+								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
+								height={40}
+								width="auto"
+							/>
+							<Elementor
+								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
+								height={40}
+								width="auto"
+							/>
+						</div>
+					</div>
+				</div>
 			</div>
 		</article>
 	</div>

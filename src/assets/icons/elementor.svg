@@ -1,0 +1,32 @@
+<svg
+		width="500"
+		height="500"
+		viewBox="0 0 500 500"
+		fill="none"
+		version="1.1"
+		id="svg1"
+		xmlns="http://www.w3.org/2000/svg"
+>
+	<g
+			clip-path="url(#clip0)"
+			id="g1"
+			transform="scale(1.25)">
+		<path
+				d="M 200,0 C 89.5321,0 0,89.5321 0,200 0,310.431 89.5321,400 200,400 310.468,400 400,310.468 400,200 399.964,89.5321 310.431,0 200,0 Z M 150.009,283.306 H 116.694 V 116.658 h 33.315 z m 133.297,0 h -99.982 v -33.315 h 99.982 z m 0,-66.667 h -99.982 v -33.315 h 99.982 z m 0,-66.666 h -99.982 v -33.315 h 99.982 z"
+				fill="#92003b"
+				id="path1"/>
+	</g>
+	<defs
+			id="defs1">
+		<clipPath
+				id="clip0">
+			<rect
+					width="400"
+					height="400"
+					fill="#ffffff"
+					id="rect1"
+					x="0"
+					y="0"/>
+		</clipPath>
+	</defs>
+</svg>

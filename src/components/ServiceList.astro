@@ -1,33 +1,78 @@
 ---
+import { MuxPlayer } from '@mux/mux-player-astro'
+import { Picture } from 'astro:assets'
 import { z } from 'astro:content'
+import type { SvgComponent } from 'astro/types'
+import { StringNoNSchema } from '../schemas/string.ts'
 
 const Schema = z.object({
-	number: z.string(),
-	title: z.string(),
-	description: z.string(),
-	items: z.array(z.string())
+	number: StringNoNSchema.describe('Number to display in large font'),
+	name: StringNoNSchema.describe('Name of the project'),
+	description: StringNoNSchema.describe('Description of the project'),
+	year: z.number().min(2000).max(2100).describe('Year of the project'),
+	videoId: StringNoNSchema.describe('Video ID of the project'),
+	backgroundImage: z.custom<ImageMetadata>().describe('Background image for the project'),
+	icons: z.array(z.custom<SvgComponent>()).min(1).max(6).describe('Technologies used in the project')
 })
 
 type Props = z.infer<typeof Schema>
 
 const Props = Schema.parse(Astro.props as Props)
 
-const { number, title, description, items } = Props
+const { number, name, description, videoId, icons, backgroundImage, year } = Props
 ---
 
-<article class="feature-content sticky top-20 mb-150 border-t bg-black">
-	<h3 class="feature-title py-8 text-gray-300 md:grid md:grid-cols-12">
-		<span>({number})</span>
-		<span class="md:col-span-7 md:col-start-6">{title}</span>
-	</h3>
+<article class="grid grid-cols-12">
+	<div class="col-span-5">
+		<span class="sticky top-0 text-[15rem] leading-none font-extrabold text-gray-300">{number}</span>
+	</div>
 
-	<div class="md:grid md:grid-cols-12">
-		<div class="flex flex-col md:col-span-7 md:col-start-6">
-			<p>{description}</p>
+	<div class="col-span-7 col-start-6 flex flex-col">
+		<div
+			class="relative flex aspect-square items-center justify-center gap-0 overflow-clip rounded-2xl p-20"
+			title={name}
+		>
+			<Picture
+				src={backgroundImage}
+				alt={description}
+				class="absolute top-0 left-0 h-full w-full object-cover object-center"
+			/>
+			<MuxPlayer
+				class="aspect-4/3 w-full overflow-clip rounded-2xl [--controls:none] [--play-button:none] [--volume-range:none]"
+				playbackId={videoId}
+				metadata={{
+					video_title: name + ' - ' + description
+				}}
+				poster=`https://image.mux.com/${videoId}/thumbnail.png?time=0`
+				storyboardSrc=`https://image.mux.com/${videoId}/storyboard.vtt?format=webp&asset_start_time=0&asset_end_time=20`
+				thumbnailTime={1}
+				theme="microvideo"
+				muted={true}
+				nohotkeys={true}
+				autoplay={true}
+				loop={true}
+			/>
+		</div>
 
-			<ol class="text-list-item divide-y font-bold">
-				{items.map(item => <li class="py-2 md:py-4">{item}</li>)}
-			</ol>
+		<div>
+			<div class="flex items-center justify-between">
+				<p>{description}</p>
+				<strong>Dev.: {year}</strong>
+			</div>
+			<div class="flex items-center justify-between">
+				<h3 class="text-gray-300">{name}</h3>
+				<div class="flex">
+					{
+						icons.map(Icon => (
+							<Icon
+								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
+								height={40}
+								width="auto"
+							/>
+						))
+					}
+				</div>
+			</div>
 		</div>
 	</div>
 </article>

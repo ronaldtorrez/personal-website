@@ -1,13 +1,12 @@
 ---
-import { Picture } from 'astro:assets'
-import { MuxPlayer } from '@mux/mux-player-astro'
-
 import Project1Bg from '@assets/projects/project-1-bg.webp'
 
 import Wordpress from '@assets/icons/wordpress.svg'
 import Woocommerce from '@assets/icons/woocommerce.svg'
 import Wpml from '@assets/icons/wpml.svg'
 import Elementor from '@assets/icons/elementor.svg'
+
+import ServiceList from './ServiceList.astro'
 ---
 
 <section class="bg-black">
@@ -23,66 +22,25 @@ import Elementor from '@assets/icons/elementor.svg'
 			</p>
 		</div>
 
-		<article class="grid grid-cols-12">
-			<div class="col-span-5">
-				<span class="sticky top-0 text-[15rem] leading-none font-extrabold text-gray-400"> 01 </span>
-			</div>
-
-			<div class="col-span-7 col-start-6 flex flex-col">
-				<div
-					class="relative flex aspect-square items-center justify-center gap-0 overflow-clip rounded-2xl p-20"
-				>
-					<Picture
-						src={Project1Bg}
-						alt="Project 1 Background"
-						class="absolute top-0 left-0 h-full w-full object-cover object-center"
-					/>
-					<MuxPlayer
-						class="aspect-4/3 w-full overflow-clip rounded-2xl [--controls:none] [--play-button:none] [--volume-range:none]"
-						playbackId="azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8"
-						metadata={{
-							video_title: 'My Astro Video'
-						}}
-						poster="https://image.mux.com/azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8/thumbnail.png?time=0"
-						storyboardSrc="https://image.mux.com/azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8/storyboard.vtt?format=webp&asset_start_time=0&asset_end_time=20"
-						thumbnailTime={1}
-						theme="microvideo"
-						autoplay={true}
-						loop={true}
-						muted={true}
-						nohotkeys={true}
-					/>
-				</div>
-
-				<div>
-					<span>Modern Marketing Website</span>
-					<div class="flex items-center justify-between">
-						<h3 class="text-gray-400">NURA</h3>
-						<div class="flex">
-							<Wordpress
-								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
-								height={40}
-								width="auto"
-							/>
-							<Woocommerce
-								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
-								height={40}
-								width="auto"
-							/>
-							<Wpml
-								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
-								height={40}
-								width="auto"
-							/>
-							<Elementor
-								class="w-fit cursor-progress grayscale transition hover:grayscale-0"
-								height={40}
-								width="auto"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
+		<div class="flex flex-col gap-60">
+			<ServiceList
+				number="01"
+				name="NURA"
+				description="Modern Marketing Website"
+				year={2025}
+				videoId="azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8"
+				backgroundImage={Project1Bg}
+				icons={[Wordpress, Woocommerce, Wpml, Elementor]}
+			/>
+			<ServiceList
+				number="02"
+				name="Job Portal"
+				description="Full-Stack Recruitment Platform"
+				year={2024}
+				videoId="ZV01irv5jPmaRLo6XEcm5o4QHrEd9g6Rr5GyqdMd1R6g"
+				backgroundImage={Project1Bg}
+				icons={[Wordpress, Woocommerce, Wpml, Elementor]}
+			/>
+		</div>
 	</div>
 </section>

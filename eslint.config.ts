@@ -1,15 +1,15 @@
+import { includeIgnoreFile } from '@eslint/compat'
+import css from '@eslint/css'
+import js from '@eslint/js'
+import json from '@eslint/json'
+import markdown from '@eslint/markdown'
 import eslintParserTypeScript from '@typescript-eslint/parser'
 import eslintParserAstro from 'astro-eslint-parser'
-import { includeIgnoreFile } from '@eslint/compat'
-import { tailwind4 } from 'tailwind-csstree'
 import { defineConfig } from 'eslint/config'
-import tseslint from 'typescript-eslint'
-import { fileURLToPath } from 'node:url'
-import markdown from '@eslint/markdown'
-import json from '@eslint/json'
-import css from '@eslint/css'
 import globals from 'globals'
-import js from '@eslint/js'
+import { fileURLToPath } from 'node:url'
+import { tailwind4 } from 'tailwind-csstree'
+import tseslint from 'typescript-eslint'
 
 const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url))
 
@@ -42,6 +42,9 @@ export default defineConfig([
 		plugins: { css },
 		language: 'css/css',
 		extends: ['css/recommended'],
+		rules: {
+			'css/use-baseline': 'off'
+		},
 		languageOptions: {
 			customSyntax: tailwind4
 		}

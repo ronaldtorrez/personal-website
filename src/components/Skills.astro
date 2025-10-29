@@ -1,0 +1,96 @@
+<section class="bg-black !pt-60">
+	<div class="container grid grid-cols-12">
+		<div class="col-span-5">
+			<h2 class="sticky top-8 text-gray-200">Web Developer /</h2>
+		</div>
+
+		<div class="col-span-6 col-start-7 flex flex-col !gap-8">
+			<h3 class="text-center text-gray-200">Skills</h3>
+			<div class="grid grid-cols-3 !gap-20">
+				<div class="flex flex-col">
+					<h4 class="text-h6 text-gray-400">Languages & Tools</h4>
+					<ul class="flex">
+						<li>PHP</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Typescript</li>
+						<li>Git</li>
+						<li>SQL</li>
+						<li>Figma</li>
+						<li>Adobe Creative</li>
+					</ul>
+				</div>
+				<div class="flex flex-col">
+					<h4 class="text-h6 text-gray-400">Frameworks & Libraries</h4>
+					<ul class="flex">
+						<li>Laravel</li>
+						<li>React</li>
+						<li>NextJS</li>
+						<li>Node.js</li>
+						<li>Astro</li>
+						<li>Tailwind</li>
+						<li>GSAP</li>
+						<li>Bootstrap</li>
+						<li>jQuery</li>
+					</ul>
+				</div>
+				<div class="flex flex-col">
+					<h4 class="text-h6 text-gray-400">Platforms & CMS</h4>
+					<ul class="flex">
+						<li>Shopify</li>
+						<li>WordPress</li>
+						<li>WooCommerce</li>
+						<li>Elementor</li>
+						<li>Bricks Builder</li>
+					</ul>
+				</div>
+				<div class="flex flex-col">
+					<h4 class="text-h6 text-gray-400">Hosting & Deployment</h4>
+					<ul class="flex">
+						<li>DigitalOcean</li>
+						<li>Vercel</li>
+						<li>SiteGround</li>
+						<li>Netlify</li>
+						<li>cPanel</li>
+						<li>Cloudflare</li>
+						<li>Docker</li>
+					</ul>
+				</div>
+				<div class="flex flex-col">
+					<h4 class="text-h6 text-gray-400">Other Skills / Specialties</h4>
+					<ul class="flex">
+						<li>SEO</li>
+						<li>Performance Optimization</li>
+						<li>UI/UX Implementation</li>
+						<li>Responsive Design</li>
+						<li>Accessibility (a11y)</li>
+						<li>API Integration</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const contenedor = document.querySelector<HTMLElement>('.text-full-size-container')
+	const texto = document.querySelector<HTMLElement>('.text-full-size')
+
+	if (contenedor && texto) {
+		// texto.style.display = 'inline-block'
+		// texto.style.whiteSpace = 'nowrap'
+		// texto.style.transformOrigin = 'left center'
+		// contenedor.style.overflow = 'hidden'
+
+		texto.style.transform = 'scale(1)'
+
+		const anchoCont = contenedor.clientWidth
+		const rect = texto.getBoundingClientRect()
+		const anchoTxt = rect.width || texto.offsetWidth || texto.scrollWidth || 0
+
+		if (anchoCont > 0 && anchoTxt > 0) {
+			const escala = anchoCont / anchoTxt
+			texto.style.transform = `scale(${escala})`
+		}
+	}
+</script>

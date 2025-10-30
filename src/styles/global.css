@@ -20,20 +20,23 @@
 	@apply mx-auto flex flex-col gap-8;
 }
 
-@utility grid {
-	&:not(.no-styles) {
+@layer base {
+	:where(.grid, .flex) {
 		@apply gap-4;
 	}
-}
 
-@utility flex {
-	&:not(.no-styles) {
-		@apply gap-4;
+	:where(section) {
+		@apply flex w-full flex-col gap-8 p-6 md:p-20;
 	}
-}
 
-section {
-	@apply flex w-full flex-col gap-8 p-6 md:p-20;
+	ol {
+		@apply list-inside list-decimal;
+	}
+
+	ol,
+	ul {
+		@apply flex flex-col gap-2;
+	}
 }
 
 html,
@@ -60,15 +63,4 @@ h4,
 h5,
 h6 {
 	@apply leading-normal font-extrabold md:leading-tight;
-}
-
-ol:not(.no-styles) {
-	@apply list-inside list-decimal;
-}
-
-ol,
-ul {
-	&:not(.no-styles) {
-		@apply flex flex-col gap-2;
-	}
 }

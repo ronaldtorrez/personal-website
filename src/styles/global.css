@@ -21,7 +21,10 @@
 }
 
 @layer base {
-	:where(.grid, .flex) {
+	[class~='grid'],
+	[class~='flex'],
+	[class*=':grid'],
+	[class*=':flex'] {
 		@apply gap-4;
 	}
 

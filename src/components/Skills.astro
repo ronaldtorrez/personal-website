@@ -1,3 +1,7 @@
+---
+import SkillList from './SkillList.astro'
+---
+
 <section class="bg-black !pt-60">
 	<div class="container grid grid-cols-12">
 		<div class="col-span-5">
@@ -5,92 +9,56 @@
 		</div>
 
 		<div class="col-span-6 col-start-7 flex flex-col !gap-8">
-			<h3 class="text-center text-gray-200">Skills</h3>
+			<h3 class="text-center text-gray-200">My Skills</h3>
 			<div class="grid grid-cols-3 !gap-20">
-				<div class="flex flex-col">
-					<h4 class="text-h6 text-gray-400">Languages & Tools</h4>
-					<ul class="flex">
-						<li>PHP</li>
-						<li>CSS</li>
-						<li>JavaScript</li>
-						<li>Typescript</li>
-						<li>Git</li>
-						<li>SQL</li>
-						<li>Figma</li>
-						<li>Adobe Creative</li>
-					</ul>
-				</div>
-				<div class="flex flex-col">
-					<h4 class="text-h6 text-gray-400">Frameworks & Libraries</h4>
-					<ul class="flex">
-						<li>Laravel</li>
-						<li>React</li>
-						<li>NextJS</li>
-						<li>Node.js</li>
-						<li>Astro</li>
-						<li>Tailwind</li>
-						<li>GSAP</li>
-						<li>Bootstrap</li>
-						<li>jQuery</li>
-					</ul>
-				</div>
-				<div class="flex flex-col">
-					<h4 class="text-h6 text-gray-400">Platforms & CMS</h4>
-					<ul class="flex">
-						<li>Shopify</li>
-						<li>WordPress</li>
-						<li>WooCommerce</li>
-						<li>Elementor</li>
-						<li>Bricks Builder</li>
-					</ul>
-				</div>
-				<div class="flex flex-col">
-					<h4 class="text-h6 text-gray-400">Hosting & Deployment</h4>
-					<ul class="flex">
-						<li>DigitalOcean</li>
-						<li>Vercel</li>
-						<li>SiteGround</li>
-						<li>Netlify</li>
-						<li>cPanel</li>
-						<li>Cloudflare</li>
-						<li>Docker</li>
-					</ul>
-				</div>
-				<div class="flex flex-col">
-					<h4 class="text-h6 text-gray-400">Other Skills / Specialties</h4>
-					<ul class="flex">
-						<li>SEO</li>
-						<li>Performance Optimization</li>
-						<li>UI/UX Implementation</li>
-						<li>Responsive Design</li>
-						<li>Accessibility (a11y)</li>
-						<li>API Integration</li>
-					</ul>
-				</div>
+				<SkillList
+					title="Development & Tools"
+					list={[
+						{ name: 'Astro', color: '#FF5D01' },
+						{ name: 'TypeScript', color: '#3178C6' },
+						{ name: 'NextJS', color: '#ffffff' },
+						{ name: 'JavaScript', color: '#F7DF1E' },
+						{ name: 'Tailwind', color: '#06B6D4' },
+						{ name: 'CSS', color: '#1572B6' },
+						{ name: 'Git', color: '#F05032' },
+						{ name: 'GSAP', color: '#88CE02' },
+						{ name: 'Bootstrap', color: '#7952B3' },
+						{ name: 'jQuery', color: '#0769AD' },
+						{ name: 'PHP', color: '#777BB4' },
+						{ name: 'Laravel', color: '#FF2D20' }
+					]}
+				/>
+				<SkillList
+					title="Platforms & Deployment"
+					list={[
+						{ name: 'Shopify', color: '#96BF48' },
+						{ name: 'WordPress', color: '#21759B' },
+						{ name: 'WooCommerce', color: '#96588A' },
+						{ name: 'Elementor', color: '#92003B' },
+						{ name: 'Bricks Builder', color: '#FED53D' },
+						{ name: 'DigitalOcean', color: '#0080FF' },
+						{ name: 'Vercel', color: '#ffffff' },
+						{ name: 'SiteGround', color: '#83B81A' },
+						{ name: 'Netlify', color: '#00C7B7' },
+						{ name: 'cPanel', color: '#FF6C2C' },
+						{ name: 'Cloudflare', color: '#F38020' },
+						{ name: 'Docker', color: '#2496ED' }
+					]}
+				/>
+				<SkillList
+					title="Specialties & Practices"
+					list={[
+						{ name: 'SEO', color: '#4285F4' },
+						{ name: 'Performance Optimization', color: '#FF6F00' },
+						{ name: 'UI/UX Implementation', color: '#6200EE' },
+						{ name: 'Responsive Design', color: '#2965F1' },
+						{ name: 'Accessibility (a11y)', color: '#FFD600' },
+						{ name: 'API Integration', color: '#0F9D58' },
+						{ name: 'Adobe Creative', color: '#FF0000' },
+						{ name: 'Figma', color: '#F24E1E' }
+					]}
+				/>
 			</div>
 		</div>
 	</div>
 </section>
-
-<script>
-	const contenedor = document.querySelector<HTMLElement>('.text-full-size-container')
-	const texto = document.querySelector<HTMLElement>('.text-full-size')
-
-	if (contenedor && texto) {
-		// texto.style.display = 'inline-block'
-		// texto.style.whiteSpace = 'nowrap'
-		// texto.style.transformOrigin = 'left center'
-		// contenedor.style.overflow = 'hidden'
-
-		texto.style.transform = 'scale(1)'
-
-		const anchoCont = contenedor.clientWidth
-		const rect = texto.getBoundingClientRect()
-		const anchoTxt = rect.width || texto.offsetWidth || texto.scrollWidth || 0
-
-		if (anchoCont > 0 && anchoTxt > 0) {
-			const escala = anchoCont / anchoTxt
-			texto.style.transform = `scale(${escala})`
-		}
-	}
-</script>

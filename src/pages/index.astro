@@ -5,14 +5,18 @@ import Services from '@components/Services.astro'
 import Skills from '@components/Skills.astro'
 import Contact from '@components/Contact.astro'
 import Footer from '@components/Footer.astro'
+import AboutMe from '@components/AboutMe.astro'
 import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout>
 	<Header />
-	<Features />
-	<Services />
-	<Skills />
+	<div class="rounded-4xl bg-black pt-10 pb-30 text-gray-400">
+		<Features />
+		<Services />
+		<Skills />
+		<AboutMe />
+	</div>
 	<Contact />
 	<Footer />
 

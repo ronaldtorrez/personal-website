@@ -27,7 +27,7 @@ const { title, list } = Props
 		{
 			list.map(item => (
 				<li
-					class="group flex cursor-progress items-center border-l-4 border-transparent from-[var(--skill-list-color)]/35 to-transparent p-2 pl-0 transition-all hover:border-[var(--skill-list-color)] hover:bg-linear-to-r hover:pl-4 hover:font-bold hover:text-[var(--skill-list-color)]"
+					class="group flex items-center border-l-4 border-transparent from-[var(--skill-list-color)]/35 to-transparent p-2 pl-0 transition-all hover:border-[var(--skill-list-color)] hover:bg-linear-to-r hover:pl-4 hover:font-bold hover:text-[var(--skill-list-color)]"
 					style={`--skill-list-color:${item.color}`}
 				>
 					{item.logo && <item.logo class="aspect-square h-6 w-fit grayscale group-hover:filter-none" />}

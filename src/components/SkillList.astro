@@ -1,13 +1,15 @@
 ---
 import { z } from 'astro:content'
 import { StringNoNSchema } from '../schemas/string.ts'
+import type { SvgComponent } from 'astro/types'
 
 const Schema = z.object({
 	title: StringNoNSchema,
 	list: z.array(
 		z.object({
 			name: StringNoNSchema,
-			color: StringNoNSchema
+			color: StringNoNSchema,
+			logo: z.custom<SvgComponent>().optional()
 		})
 	)
 })
@@ -21,14 +23,14 @@ const { title, list } = Props
 
 <article class="flex flex-col">
 	<h4 class="text-h6 text-gray-400">{title}</h4>
-	<ul class="flex">
+	<ul class="flex gap-2">
 		{
 			list.map(item => (
 				<li
-					class="group flex cursor-progress gap-0 hover:font-bold hover:text-[var(--skill-list-color)]"
+					class="group flex cursor-progress items-center border-l-4 border-transparent from-[var(--skill-list-color)]/35 to-transparent p-2 pl-0 transition-all hover:border-[var(--skill-list-color)] hover:bg-linear-to-r hover:pl-4 hover:font-bold hover:text-[var(--skill-list-color)]"
 					style={`--skill-list-color:${item.color}`}
 				>
-					<span class="hidden group-hover:inline-block">#</span>
+					{item.logo && <item.logo class="aspect-square h-6 w-fit grayscale group-hover:filter-none" />}
 					{item.name}
 				</li>
 			))

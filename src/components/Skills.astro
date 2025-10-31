@@ -1,5 +1,31 @@
 ---
 import SkillList from './SkillList.astro'
+
+import AstroLogo from '@assets/logos/astro-dark.svg'
+import TypeScriptLogo from '@assets/logos/typescript.svg'
+import NextJSLogo from '@assets/logos/nextjs-dark.svg'
+import JavaScriptLogo from '@assets/logos/javascript.svg'
+import TailwindLogo from '@assets/logos/tailwindcss.svg'
+import CSSLogo from '@assets/logos/css.svg'
+import GitLogo from '@assets/logos/git.svg'
+import GSAPLogo from '@assets/logos/sourcegraph.svg'
+import BootstrapLogo from '@assets/logos/bootstrap.svg'
+import jQueryLogo from '@assets/logos/jquery.svg'
+import PHPLogo from '@assets/logos/php-dark.svg'
+import LaravelLogo from '@assets/logos/laravel.svg'
+import ShopifyLogo from '@assets/logos/shopify.svg'
+import WordPressLogo from '@assets/logos/wordpress.svg'
+import WooCommerceLogo from '@assets/logos/woocommerce.svg'
+import ElementorLogo from '@assets/logos/elementor.svg'
+import BricksLogo from '@assets/logos/bricks.svg'
+import DigitalOceanLogo from '@assets/logos/digitalocean.svg'
+import VercelLogo from '@assets/logos/vercel-dark.svg'
+import SiteGroundLogo from '@assets/logos/siteground.svg'
+import cPanelLogo from '@assets/logos/cpanel.svg'
+import CloudflareLogo from '@assets/logos/cloudflare.svg'
+import DockerLogo from '@assets/logos/docker.svg'
+import AdobeLogo from '@assets/logos/adobe.svg'
+import FigmaLogo from '@assets/logos/figma.svg'
 ---
 
 <section class="bg-black pt-60 text-gray-400">
@@ -14,48 +40,47 @@ import SkillList from './SkillList.astro'
 				<SkillList
 					title="Development & Tools"
 					list={[
-						{ name: 'Astro', color: '#FF5D01' },
-						{ name: 'TypeScript', color: '#3178C6' },
-						{ name: 'NextJS', color: '#ffffff' },
-						{ name: 'JavaScript', color: '#F7DF1E' },
-						{ name: 'Tailwind', color: '#06B6D4' },
-						{ name: 'CSS', color: '#1572B6' },
-						{ name: 'Git', color: '#F05032' },
-						{ name: 'GSAP', color: '#88CE02' },
-						{ name: 'Bootstrap', color: '#7952B3' },
-						{ name: 'jQuery', color: '#0769AD' },
-						{ name: 'PHP', color: '#777BB4' },
-						{ name: 'Laravel', color: '#FF2D20' }
+						{ name: 'Astro', color: '#FF5D01', logo: AstroLogo },
+						{ name: 'TypeScript', color: '#3178C6', logo: TypeScriptLogo },
+						{ name: 'NextJS', color: '#ffffff', logo: NextJSLogo },
+						{ name: 'JavaScript', color: '#F7DF1E', logo: JavaScriptLogo },
+						{ name: 'Tailwind', color: '#06B6D4', logo: TailwindLogo },
+						{ name: 'CSS', color: '#1572B6', logo: CSSLogo },
+						{ name: 'Git', color: '#F05032', logo: GitLogo },
+						{ name: 'GSAP', color: '#88CE02', logo: GSAPLogo },
+						{ name: 'Bootstrap', color: '#7952B3', logo: BootstrapLogo },
+						{ name: 'jQuery', color: '#0769AD', logo: jQueryLogo },
+						{ name: 'PHP', color: '#777BB4', logo: PHPLogo },
+						{ name: 'Laravel', color: '#FF2D20', logo: LaravelLogo }
 					]}
 				/>
 				<SkillList
 					title="Platforms & Deployment"
 					list={[
-						{ name: 'Shopify', color: '#96BF48' },
-						{ name: 'WordPress', color: '#21759B' },
-						{ name: 'WooCommerce', color: '#96588A' },
-						{ name: 'Elementor', color: '#92003B' },
-						{ name: 'Bricks Builder', color: '#FED53D' },
-						{ name: 'DigitalOcean', color: '#0080FF' },
-						{ name: 'Vercel', color: '#ffffff' },
-						{ name: 'SiteGround', color: '#83B81A' },
-						{ name: 'Netlify', color: '#00C7B7' },
-						{ name: 'cPanel', color: '#FF6C2C' },
-						{ name: 'Cloudflare', color: '#F38020' },
-						{ name: 'Docker', color: '#2496ED' }
+						{ name: 'Shopify', color: '#96BF48', logo: ShopifyLogo },
+						{ name: 'WordPress', color: '#21759B', logo: WordPressLogo },
+						{ name: 'WooCommerce', color: '#96588A', logo: WooCommerceLogo },
+						{ name: 'Elementor', color: '#92003B', logo: ElementorLogo },
+						{ name: 'Bricks Builder', color: '#FED53D', logo: BricksLogo },
+						{ name: 'DigitalOcean', color: '#0080FF', logo: DigitalOceanLogo },
+						{ name: 'Vercel', color: '#ffffff', logo: VercelLogo },
+						{ name: 'SiteGround', color: '#83B81A', logo: SiteGroundLogo },
+						{ name: 'cPanel', color: '#FF6C2C', logo: cPanelLogo },
+						{ name: 'Cloudflare', color: '#F38020', logo: CloudflareLogo },
+						{ name: 'Docker', color: '#2496ED', logo: DockerLogo }
 					]}
 				/>
 				<SkillList
 					title="Specialties & Practices"
 					list={[
+						{ name: 'Adobe Creative', color: '#FF0000', logo: AdobeLogo },
+						{ name: 'Figma', color: '#F24E1E', logo: FigmaLogo },
 						{ name: 'SEO', color: '#4285F4' },
 						{ name: 'Performance Optimization', color: '#FF6F00' },
 						{ name: 'UI/UX Implementation', color: '#6200EE' },
 						{ name: 'Responsive Design', color: '#2965F1' },
 						{ name: 'Accessibility (a11y)', color: '#FFD600' },
-						{ name: 'API Integration', color: '#0F9D58' },
-						{ name: 'Adobe Creative', color: '#FF0000' },
-						{ name: 'Figma', color: '#F24E1E' }
+						{ name: 'API Integration', color: '#0F9D58' }
 					]}
 				/>
 			</div>

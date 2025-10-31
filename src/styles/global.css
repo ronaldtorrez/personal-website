@@ -28,7 +28,7 @@
 		@apply gap-4;
 	}
 
-	:where(section) {
+	section {
 		@apply flex w-full flex-col gap-8 p-6 md:p-20;
 	}
 
@@ -39,6 +39,25 @@
 	ol,
 	ul {
 		@apply flex flex-col gap-2;
+	}
+
+	form {
+		@apply flex w-full flex-col gap-6;
+
+		input,
+		textarea {
+			@apply w-full rounded-lg border border-gray-300 p-4;
+			@apply focus:bg-gray-50;
+		}
+
+		textarea {
+			@apply field-sizing-content max-h-80 min-h-40 resize-none;
+		}
+
+		button {
+			@apply cursor-pointer rounded-lg bg-gray-900 px-8 py-4 font-semibold text-gray-50 transition;
+			@apply hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900;
+		}
 	}
 }
 

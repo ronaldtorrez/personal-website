@@ -3,6 +3,7 @@ import { Picture } from 'astro:assets'
 
 import ShortDate from '@components/ShortDate.astro'
 import Navbar from '@components/NavBar.astro'
+import Button from '@components/Button.astro'
 
 import headerImg from '@assets/header-img.webp'
 
@@ -26,18 +27,17 @@ import ArrowUpRight from 'phosphor-astro/ArrowUpRightDuotone.astro'
 						thoughtful digital experiences that leave a mark.
 					</p>
 
-					<!-- TODO: Meke bottom component -->
-					<button class="flex w-fit items-center gap-4 rounded-full bg-black px-6 py-3 font-bold text-white">
+					<Button href="#contact">
 						Contact me
 						<ArrowUpRight class="size-8" />
-					</button>
+					</Button>
 				</div>
 			</div>
 
 			<Picture
 				src={headerImg}
 				alt="Photo of me"
-				class="brightness rounded-md grayscale"
+				class="brightness grayscale"
 			/>
 
 			<p class="text-right md:text-2xl">

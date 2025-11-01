@@ -1,0 +1,41 @@
+---
+import { cn } from '@utils/css.ts'
+import type { HTMLAttributes } from 'astro/types'
+
+type LinkProps = { href: string } & HTMLAttributes<'a'>
+type ButtonProps = { href?: undefined } & HTMLAttributes<'button'>
+
+type Props = LinkProps | ButtonProps
+
+const props = Astro.props as Props
+
+const { class: classes, ...rest } = props
+
+const isLink = typeof props.href === 'string'
+
+let rel: string | undefined = (rest as LinkProps).rel
+
+if (isLink && (rest as LinkProps).target === '_blank') {
+	rel = [rel, 'noopener', 'noreferrer'].filter(Boolean).join(' ')
+}
+---
+
+{
+	isLink ? (
+		<a
+			{...(rest as LinkProps)}
+			class={cn('no-styles btn', classes)}
+			rel={rel}
+		>
+			<slot />
+		</a>
+	) : (
+		<button
+			{...(rest as ButtonProps)}
+			class={classes}
+			type={(rest as ButtonProps).type ?? 'button'}
+		>
+			<slot />
+		</button>
+	)
+}

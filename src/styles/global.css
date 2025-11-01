@@ -41,7 +41,13 @@
 		@apply flex flex-col gap-2;
 	}
 
-	form {
+	a {
+		@apply px-2 font-medium;
+		@apply hover:font-semibold hover:text-gray-800 hover:underline hover:underline-offset-4;
+		@apply focus:text-gray-800 focus:no-underline;
+	}
+
+	s form {
 		@apply flex w-full flex-col gap-6;
 
 		input,

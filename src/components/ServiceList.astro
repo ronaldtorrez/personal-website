@@ -26,7 +26,7 @@ const { number, title, description, items } = Props
 		<div class="flex flex-col md:col-span-8 md:col-start-5">
 			<p>{description}</p>
 
-			<ol class="text-list-item divide-y font-semibold">
+			<ol class="divide-y text-[clamp(1.15rem,5vw+1rem,1.5rem)] font-semibold">
 				{items.map(item => <li class="py-2 md:py-4">{item}</li>)}
 			</ol>
 		</div>

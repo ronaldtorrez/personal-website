@@ -28,15 +28,18 @@ import AdobeLogo from '@assets/logos/adobe.svg'
 import FigmaLogo from '@assets/logos/figma.svg'
 ---
 
-<section class="pt-60">
-	<div class="container grid grid-cols-12">
-		<div class="col-span-5">
+<section
+	class="pt-60"
+	id="skills"
+>
+	<div class="container lg:grid lg:grid-cols-12">
+		<div class="lg:col-span-5">
 			<h2 class="text-light-2">Web Developer /</h2>
 		</div>
 
-		<div class="col-span-6 col-start-7 flex flex-col gap-8">
+		<div class="flex flex-col gap-8 lg:col-span-6 lg:col-start-7">
 			<h3 class="text-light-3 text-center">My Skills</h3>
-			<div class="grid grid-cols-3 gap-20">
+			<div class="flex flex-col gap-20 md:grid md:grid-cols-2 lg:grid-cols-3">
 				<SkillList
 					title="Development & Tools"
 					list={[

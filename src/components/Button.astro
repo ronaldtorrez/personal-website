@@ -13,7 +13,7 @@ const { class: classes, ...rest } = props
 
 const isLink = typeof props.href === 'string'
 
-let rel: string | undefined = (rest as LinkProps).rel
+let rel = (rest as LinkProps).rel
 
 if (isLink && (rest as LinkProps).target === '_blank') {
 	rel = [rel, 'noopener', 'noreferrer'].filter(Boolean).join(' ')

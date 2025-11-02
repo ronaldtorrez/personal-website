@@ -1,19 +1,20 @@
 ---
 import Header from '@components/Header.astro'
-import Features from '@components/Features.astro'
 import Services from '@components/Services.astro'
+import Projects from '@components/Projects.astro'
 import Skills from '@components/Skills.astro'
 import Contact from '@components/Contact.astro'
 import Footer from '@components/Footer.astro'
 import AboutMe from '@components/AboutMe.astro'
+
 import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout>
 	<Header />
-	<div class="rounded-4xl bg-black pt-10 pb-30 text-gray-400">
-		<Features />
+	<div class="bg-secondary rounded-4xl pt-10 pb-30 text-gray-400">
 		<Services />
+		<Projects />
 		<Skills />
 		<AboutMe />
 	</div>

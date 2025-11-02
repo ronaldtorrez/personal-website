@@ -13,6 +13,7 @@ import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
 					type="text"
 					name="name"
 					placeholder="Drop a name"
+					autocomplete="name"
 					required
 				/>
 			</label>
@@ -21,6 +22,7 @@ import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
 					type="email"
 					name="email"
 					placeholder="Wanna hear back? Add your email"
+					autocomplete="email"
 					required
 				/>
 			</label>
@@ -32,13 +34,52 @@ import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
 					required
 				></textarea>
 			</label>
-			<Button
-				type="submit"
-				class="justify-center"
-			>
+			<Button type="submit">
 				<ChatsCircle class="size-6" />
 				Send Message
 			</Button>
 		</form>
 	</div>
 </section>
+
+<script>
+	import axios from 'axios'
+
+	const form = document.querySelector<HTMLFormElement>('form')
+
+	const setDisabled = (formEl: HTMLFormElement, disabled: Boolean) => {
+		formEl.querySelectorAll<HTMLFormElement>('input, textarea, button').forEach(el => {
+			el.disabled = disabled
+			// if (disabled) {
+			// 	el.classList?.add('opacity-60', 'cursor-not-allowed')
+			// } else {
+			// 	el.classList?.remove('opacity-60', 'cursor-not-allowed')
+			// }
+		})
+	}
+
+	form?.addEventListener('submit', async e => {
+		e.preventDefault()
+
+		const data = Object.fromEntries(new FormData(form))
+
+		console.log('Form Data', data)
+
+		setDisabled(form, true)
+
+		await axios
+			.post('https://formsubmit.co/ajax/hikebi1888@lovleo.com', data, {
+				headers: { 'Content-Type': 'application/json' }
+			})
+			.then(response => {
+				console.log('Form submitted successfully', response.data)
+				form.reset()
+			})
+			.catch(error => {
+				console.error('Error submitting form', error)
+			})
+			.finally(() => {
+				setDisabled(form, false)
+			})
+	})
+</script>

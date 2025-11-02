@@ -1,6 +1,6 @@
 ---
 import { z } from 'astro:content'
-import { StringNoNSchema } from '../schemas/string.ts'
+import { StringNoNSchema } from '@schemas/string.ts'
 import type { SvgComponent } from 'astro/types'
 
 const Schema = z.object({
@@ -22,7 +22,7 @@ const { title, list } = Props
 ---
 
 <article class="flex flex-col">
-	<h4 class="text-h6 text-gray-400">{title}</h4>
+	<h4 class="text-h6 text-light-3">{title}</h4>
 	<ul class="flex gap-2">
 		{
 			list.map(item => (

@@ -11,7 +11,10 @@
 	--color-background: var(--color-gray-200);
 	--color-accent: var(--color-gray-800);
 	--color-accent-alt: var(--color-gray-700);
+
 	--color-light: var(--color-gray-50);
+	--color-light-2: var(--color-gray-200);
+	--color-light-3: var(--color-gray-300);
 
 	--text-h1: clamp(4rem, 7vw + 1rem, 10rem);
 	--text-h2: clamp(3rem, 5vw + 1rem, 8rem);
@@ -71,7 +74,7 @@
 
 		input,
 		textarea {
-			@apply w-full rounded-2xl border border-gray-300 p-4;
+			@apply border-light-3 w-full rounded-2xl border p-4;
 			@apply focus:bg-light;
 		}
 

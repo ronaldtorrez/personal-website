@@ -1,0 +1,108 @@
+---
+import CaretDoubleUp from 'phosphor-astro/CaretDoubleUpDuotone.astro'
+---
+
+<section>
+	<footer class="container md:grid md:grid-cols-3 md:gap-20">
+		<nav class="flex flex-col">
+			<h2 class="text-h6 border-b">Menu</h2>
+			<ul>
+				<li>
+					<a
+						class="no-underline"
+						href="/"
+						aria-label="Home Page"
+						>Home</a
+					>
+				</li>
+				<li>
+					<a
+						class="no-underline"
+						href="#services"
+						aria-label="Services Offered"
+						>Services</a
+					>
+				</li>
+				<li>
+					<a
+						class="no-underline"
+						href="#projects"
+						aria-label="Projects"
+						>Projects</a
+					>
+				</li>
+				<li>
+					<a
+						class="no-underline"
+						href="#about-me"
+						aria-label="About Me"
+						>About</a
+					>
+				</li>
+				<li>
+					<a
+						class="no-underline"
+						href="#contact"
+						aria-label="Contact Me "
+						>Contact</a
+					>
+				</li>
+			</ul>
+		</nav>
+
+		<nav class="flex flex-col">
+			<h2 class="text-h6 border-b">Socials</h2>
+			<ul>
+				<li>
+					<a
+						class="no-underline"
+						href="/"
+						aria-label="Linking Profile"
+						>Linking</a
+					>
+				</li>
+				<li>
+					<a
+						class="no-underline"
+						href="#"
+						aria-label="Github Repository"
+						>Github</a
+					>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="hidden flex-col items-end justify-end md:flex">
+			<CaretDoubleUp
+				class="bg-light border-light-2 size-20 cursor-pointer rounded-xl border-4 p-4 transition-all hover:rounded-[50%]"
+				onclick="window.scrollTo({ top: 0 })"
+			/>
+		</div>
+
+		<div
+			class="col-span-full flex items-center justify-center text-center text-sm text-gray-400 md:mt-0 md:text-left"
+		>
+			<p>
+				Developed by
+				<a
+					class="font-bold"
+					href="https://github.com/ronaldtorrez"
+					target="_blank"
+					aria-label="Github Repository"
+				>
+					Ronald Torrez
+				</a>
+				| Design inspired by
+				<a
+					class="font-bold"
+					href="https://zunedaalim.com/"
+					target="_blank"
+					rel="noopener noreferrer nofollow"
+					aria-label="Zuneda Alim Website"
+				>
+					Zuneda Alim
+				</a>
+			</p>
+		</div>
+	</footer>
+</section>

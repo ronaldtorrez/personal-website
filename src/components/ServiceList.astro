@@ -16,7 +16,7 @@ const Props = Schema.parse(Astro.props as Props)
 const { number, title, description, items } = Props
 ---
 
-<article class="feature-content sticky top-20 mb-150 border-t bg-black">
+<article class="feature-content bg-secondary sticky top-20 mb-150 border-t">
 	<h3 class="feature-title py-8 text-gray-300 md:grid md:grid-cols-12">
 		<span>({number})</span>
 		<span class="md:col-span-8 md:col-start-5">{title}</span>
@@ -26,7 +26,7 @@ const { number, title, description, items } = Props
 		<div class="flex flex-col md:col-span-8 md:col-start-5">
 			<p>{description}</p>
 
-			<ol class="text-list-item divide-y font-bold">
+			<ol class="text-list-item divide-y font-semibold">
 				{items.map(item => <li class="py-2 md:py-4">{item}</li>)}
 			</ol>
 		</div>

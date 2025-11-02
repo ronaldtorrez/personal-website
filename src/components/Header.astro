@@ -8,14 +8,14 @@ import Button from '@components/Button.astro'
 import headerImg from '@assets/header-img.webp'
 
 import Quotes from 'phosphor-astro/QuotesDuotone.astro'
-import ArrowUpRight from 'phosphor-astro/ArrowUpRightDuotone.astro'
+import PaperPlaneTilt from 'phosphor-astro/PaperPlaneTiltDuotone.astro'
 ---
 
-<section class="flex min-h-screen flex-col gap-20 bg-slate-200 pb-30">
+<section class="bg-background flex min-h-screen flex-col gap-20 pb-30">
 	<div class="container">
 		<Navbar />
 
-		<h1 class="mb-6 text-center text-black uppercase lg:mb-10">Ronald Torrez</h1>
+		<h1 class="text-secondary mb-6 text-center uppercase lg:mb-10">Ronald Torrez</h1>
 
 		<div class="grid w-full items-end gap-10 sm:grid-cols-2 md:gap-20 lg:grid-cols-3">
 			<div class="sm:col-span-2 lg:col-span-1">
@@ -29,7 +29,7 @@ import ArrowUpRight from 'phosphor-astro/ArrowUpRightDuotone.astro'
 
 					<Button href="#contact">
 						Contact me
-						<ArrowUpRight class="size-8" />
+						<PaperPlaneTilt class="size-6" />
 					</Button>
 				</div>
 			</div>
@@ -43,7 +43,7 @@ import ArrowUpRight from 'phosphor-astro/ArrowUpRightDuotone.astro'
 			<p class="text-right md:text-2xl">
 				Work Together, today
 				<br />
-				<ShortDate class="text-5xl font-extrabold text-black md:text-7xl" />
+				<ShortDate class="text-secondary text-5xl font-extrabold md:text-7xl" />
 			</p>
 		</div>
 	</div>

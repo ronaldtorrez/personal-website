@@ -108,10 +108,11 @@ const FORM_SUBMIT_URL = import.meta.env.FORM_SUBMIT_URL
 
 	form?.addEventListener('submit', async e => {
 		e.preventDefault()
-		disableElements(true)
-		updateStatus('sending')
 
 		const data = Object.fromEntries(new FormData(form))
+
+		disableElements(true)
+		updateStatus('sending')
 
 		await axios
 			.post(FORM_SUBMIT_URL, data, {
@@ -123,7 +124,6 @@ const FORM_SUBMIT_URL = import.meta.env.FORM_SUBMIT_URL
 			})
 			.catch(error => {
 				updateStatus('error')
-				console.error('Error submitting form', error)
 			})
 			.finally(() => {
 				disableElements(false)

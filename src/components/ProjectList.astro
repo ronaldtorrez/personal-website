@@ -1,4 +1,5 @@
 ---
+import Heading from '@components/Heading.astro'
 import { MuxPlayer } from '@mux/mux-player-astro'
 import { Picture } from 'astro:assets'
 import { z } from 'astro:content'
@@ -60,7 +61,13 @@ const { number, name, description, videoId, icons, backgroundImage, year } = Pro
 				<strong>Dev.: {year}</strong>
 			</div>
 			<div class="flex items-center justify-between">
-				<h3 class="text-light-3">{name}</h3>
+				<Heading
+					level={3}
+					useLink={false}
+					class="text-light-3"
+				>
+					{name}
+				</Heading>
 				<div class="flex">
 					{
 						icons.map(Icon => (

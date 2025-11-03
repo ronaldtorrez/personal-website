@@ -1,4 +1,5 @@
 ---
+import Heading from '@components/Heading.astro'
 import { Picture } from 'astro:assets'
 
 import ShortDate from '@components/ShortDate.astro'
@@ -15,7 +16,13 @@ import PaperPlaneTilt from 'phosphor-astro/PaperPlaneTiltDuotone.astro'
 	<div class="container">
 		<Navbar />
 
-		<h1 class="text-secondary mb-6 text-center uppercase lg:mb-10">Ronald Torrez</h1>
+		<Heading
+			level={1}
+			useLink={false}
+			class="text-secondary mb-6 text-center uppercase lg:mb-10"
+		>
+			Ronald Torrez
+		</Heading>
 
 		<div class="grid w-full items-end gap-10 sm:grid-cols-2 md:gap-20 lg:grid-cols-3">
 			<div class="sm:col-span-2 lg:col-span-1">

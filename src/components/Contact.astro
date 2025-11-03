@@ -1,5 +1,6 @@
 ---
 import Button from '@components/Button.astro'
+import Heading from '@components/Heading.astro'
 
 import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
 import CircleNotch from 'phosphor-astro/CircleNotchDuotone.astro'
@@ -10,7 +11,14 @@ const FORM_SUBMIT_URL = import.meta.env.FORM_SUBMIT_URL
 
 <section id="contact">
 	<div class="container flex items-center justify-center gap-14 md:max-w-3/4 lg:max-w-1/2">
-		<h2 class="text-center">Let's Make It Happen!</h2>
+		<Heading
+			level={2}
+			useLink={false}
+			class="text-center"
+		>
+			Let's Make It Happen!
+		</Heading>
+
 		<form data-submit-url={FORM_SUBMIT_URL}>
 			<label>
 				<input

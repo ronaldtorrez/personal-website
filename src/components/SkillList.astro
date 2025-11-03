@@ -1,4 +1,5 @@
 ---
+import Heading from '@components/Heading.astro'
 import { z } from 'astro:content'
 import { StringNoNSchema } from '@schemas/string.ts'
 import type { SvgComponent } from 'astro/types'
@@ -22,7 +23,12 @@ const { title, list } = Props
 ---
 
 <article class="flex flex-col">
-	<h4 class="text-h6 text-light-3">{title}</h4>
+	<Heading
+		level={4}
+		class="text-h6 text-light-3"
+		>{title}</Heading
+	>
+
 	<ul class="flex gap-2">
 		{
 			list.map(item => (

@@ -1,4 +1,5 @@
 ---
+import Heading from '@components/Heading.astro'
 import { z } from 'astro:content'
 import { StringNoNSchema } from '@schemas/string.ts'
 
@@ -17,10 +18,14 @@ const { number, title, description, items } = Props
 ---
 
 <article class="feature-content bg-secondary sticky top-20 mb-150 border-t">
-	<h3 class="feature-title text-light-3 py-8 md:grid md:grid-cols-12">
+	<Heading
+		level={3}
+		useLink={false}
+		class="feature-title text-light-3 py-8 md:grid md:grid-cols-12"
+	>
 		<span>({number})</span>
 		<span class="md:col-span-7 md:col-start-6">{title}</span>
-	</h3>
+	</Heading>
 
 	<div class="md:grid md:grid-cols-12">
 		<div class="flex flex-col md:col-span-7 md:col-start-6">

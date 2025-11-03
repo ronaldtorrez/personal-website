@@ -7,17 +7,15 @@ import striptags from 'striptags'
 import type { HTMLAttributes } from 'astro/types'
 
 const Schema = z.object({
-	level: z.number().min(1).max(6).default(2),
-	link: z.boolean().default(true),
-	class: StringNoNSchema.optional(),
-	id: StringNoNSchema.optional()
+	level: z.number().min(1).max(6),
+	useLink: z.boolean().default(true),
+	class: StringNoNSchema.optional()
 })
 
-type Props = z.infer<typeof Schema> & HTMLAttributes<'h1'>
+type Props = z.input<typeof Schema> & HTMLAttributes<'h1'>
 
 const props = Schema.parse(Astro.props as Props)
-const { level, link, id, class: classes, ...rest } = props as Props
-
+const { level, useLink, id, class: classes, ...rest } = props as Props
 const Tag = `h${level}` as const
 
 const hasContent = Astro.slots.has('default')
@@ -28,18 +26,18 @@ const getID = id ? id : slugify(textContent, { lower: true, strict: true })
 
 <Tag
 	id={getID}
-	class={cn('group', classes)}
+	class={cn('group relative overflow-hidden', classes)}
 	{...rest}
 >
-	<slot />
 	{
-		link && (
+		useLink && (
 			<a
 				href={'#' + getID}
-				class="no-styles opacity-25 transition-all group-hover:opacity-100"
+				class="no-styles absolute top-0 -left-20 opacity-0 transition-all transition-discrete duration-300 group-hover:relative group-hover:left-0 group-hover:opacity-50 hover:opacity-100"
 			>
 				#
 			</a>
 		)
 	}
+	<slot />
 </Tag>

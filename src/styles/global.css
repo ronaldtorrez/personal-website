@@ -36,7 +36,7 @@
 	}
 
 	section {
-		@apply flex w-full flex-col gap-8 p-6 md:p-20;
+		@apply flex w-full flex-col gap-8 px-6 py-20 md:px-20;
 	}
 
 	ol {
@@ -111,5 +111,5 @@
 
 html,
 body {
-	@apply text-primary text-lg leading-relaxed font-medium;
+	@apply text-primary bg-light text-lg leading-relaxed font-medium;
 }

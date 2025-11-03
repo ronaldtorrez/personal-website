@@ -2,12 +2,16 @@
 import Button from '@components/Button.astro'
 
 import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
+import CircleNotch from 'phosphor-astro/CircleNotchDuotone.astro'
+import ArrowsClockwise from 'phosphor-astro/ArrowsClockwiseDuotone.astro'
+
+const FORM_SUBMIT_URL = import.meta.env.FORM_SUBMIT_URL
 ---
 
 <section id="contact">
 	<div class="container flex items-center justify-center gap-14 md:max-w-3/4 lg:max-w-1/2">
 		<h2 class="text-center">Let's Make It Happen!</h2>
-		<form>
+		<form data-submit-url={FORM_SUBMIT_URL}>
 			<label>
 				<input
 					type="text"
@@ -35,9 +39,36 @@ import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
 				></textarea>
 			</label>
 			<Button type="submit">
-				<ChatsCircle class="size-6" />
-				Send Message
+				<div
+					id="form-status-init"
+					class="form-status flex"
+					data-status-message="Thank you! I'll get back to you shortly!"
+				>
+					<ChatsCircle class="size-6" />
+					Send Message
+				</div>
+				<div
+					id="form-status-sending"
+					class="form-status hidden"
+					data-status-message="Just a moment..."
+				>
+					<CircleNotch class="size-6 animate-spin" />
+					Sending...
+				</div>
+				<div
+					id="form-status-error"
+					class="form-status hidden"
+					data-status-message="Error! Try Again."
+				>
+					<ArrowsClockwise class="size-6" />
+					Send Message again
+				</div>
 			</Button>
+			<p
+				id="form-status-message"
+				class="hidden text-center"
+			>
+			</p>
 		</form>
 	</div>
 </section>
@@ -46,40 +77,56 @@ import ChatsCircle from 'phosphor-astro/ChatsCircleDuotone.astro'
 	import axios from 'axios'
 
 	const form = document.querySelector<HTMLFormElement>('form')
+	const FORM_SUBMIT_URL = form?.dataset.submitUrl
 
-	const setDisabled = (formEl: HTMLFormElement, disabled: Boolean) => {
-		formEl.querySelectorAll<HTMLFormElement>('input, textarea, button').forEach(el => {
+	const updateStatus = (status: 'init' | 'sending' | 'error') => {
+		const formStatusEl = form?.querySelectorAll<HTMLElement>('form button .form-status')
+		const formMessageEl = form?.querySelector<HTMLElement>('form #form-status-message')
+		const statusEl = form?.querySelector<HTMLElement>(`form #form-status-${status}`)
+
+		formStatusEl?.forEach(el => {
+			el.classList.remove('flex')
+			el.classList.add('hidden')
+		})
+
+		statusEl?.classList.remove('hidden')
+		statusEl?.classList.add('flex')
+
+		if (formMessageEl && statusEl) {
+			formMessageEl.textContent = statusEl.dataset.statusMessage || ''
+			formMessageEl.classList.remove('hidden')
+		} else if (formMessageEl) {
+			formMessageEl.classList.add('hidden')
+		}
+	}
+
+	const disableElements = (disabled: Boolean) => {
+		form?.querySelectorAll<HTMLFormElement>('input, textarea, button').forEach(el => {
 			el.disabled = disabled
-			// if (disabled) {
-			// 	el.classList?.add('opacity-60', 'cursor-not-allowed')
-			// } else {
-			// 	el.classList?.remove('opacity-60', 'cursor-not-allowed')
-			// }
 		})
 	}
 
 	form?.addEventListener('submit', async e => {
 		e.preventDefault()
+		disableElements(true)
+		updateStatus('sending')
 
 		const data = Object.fromEntries(new FormData(form))
 
-		console.log('Form Data', data)
-
-		setDisabled(form, true)
-
 		await axios
-			.post('https://formsubmit.co/ajax/hikebi1888@lovleo.com', data, {
+			.post(FORM_SUBMIT_URL, data, {
 				headers: { 'Content-Type': 'application/json' }
 			})
 			.then(response => {
-				console.log('Form submitted successfully', response.data)
+				updateStatus('init')
 				form.reset()
 			})
 			.catch(error => {
+				updateStatus('error')
 				console.error('Error submitting form', error)
 			})
 			.finally(() => {
-				setDisabled(form, false)
+				disableElements(false)
 			})
 	})
 </script>

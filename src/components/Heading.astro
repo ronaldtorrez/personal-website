@@ -1,0 +1,45 @@
+---
+import { StringNoNSchema } from '@schemas/string.ts'
+import { cn } from '@utils/css.ts'
+import { z } from 'astro:content'
+import slugify from 'slugify'
+import striptags from 'striptags'
+import type { HTMLAttributes } from 'astro/types'
+
+const Schema = z.object({
+	level: z.number().min(1).max(6).default(2),
+	link: z.boolean().default(true),
+	class: StringNoNSchema.optional(),
+	id: StringNoNSchema.optional()
+})
+
+type Props = z.infer<typeof Schema> & HTMLAttributes<'h1'>
+
+const props = Schema.parse(Astro.props as Props)
+const { level, link, id, class: classes, ...rest } = props as Props
+
+const Tag = `h${level}` as const
+
+const hasContent = Astro.slots.has('default')
+const html = hasContent ? await Astro.slots.render('default') : ''
+const textContent = striptags(html).trim()
+const getID = id ? id : slugify(textContent, { lower: true, strict: true })
+---
+
+<Tag
+	id={getID}
+	class={cn('group', classes)}
+	{...rest}
+>
+	<slot />
+	{
+		link && (
+			<a
+				href={'#' + getID}
+				class="no-styles opacity-25 transition-all group-hover:opacity-100"
+			>
+				#
+			</a>
+		)
+	}
+</Tag>

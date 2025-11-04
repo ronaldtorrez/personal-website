@@ -1,5 +1,10 @@
 ---
-import '../styles/global.css'
+import { SEO } from 'astro-seo'
+import { site } from 'astro:config/client'
+
+import OGDefault from '@public/og-default.png'
+
+import '@styles/global.css'
 ---
 
 <!doctype html>
@@ -8,25 +13,41 @@ import '../styles/global.css'
 	class="scroll-smooth"
 >
 	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width"
+		<SEO
+			titleTemplate="%s - Ronald Torrez | Web Developer Portfolio"
+			titleDefault="Ronald Torrez | Web Developer Portfolio"
+			description="Ronald Torrez's personal website and portfolio. I am a software developer specializing in web development, creating modern and responsive web applications."
+			canonical={site}
+			charset="UTF-8"
+			openGraph={{
+				basic: {
+					title: 'Ronald Torrez web developer portfolio',
+					url: site,
+					type: 'website',
+					image: new URL(OGDefault.src, site).href
+				}
+			}}
+			twitter={{
+				creator: '@ronaldtorrez'
+			}}
+			extend={{
+				link: [
+					{ rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+					{ rel: 'sitemap', href: '/sitemap-index.xml' }
+				],
+
+				meta: [
+					{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+					{ name: 'twitter:image', content: new URL(OGDefault.src, site).href },
+					{ name: 'twitter:title', content: 'Ronald Torrez' },
+					{
+						name: 'twitter:description',
+						content:
+							"Ronald Torrez's personal website and portfolio. I am a software developer specializing in web development, creating modern and responsive web applications."
+					}
+				]
+			}}
 		/>
-		<meta
-			name="generator"
-			content={Astro.generator}
-		/>
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon.svg"
-		/>
-		<link
-			rel="sitemap"
-			href="/sitemap-index.xml"
-		/>
-		<title>Astro Basics</title>
 	</head>
 	<body>
 		<slot />

@@ -10,7 +10,8 @@
 			"@pages/*": ["./src/pages/*"],
 			"@utils/*": ["./src/utils/*"],
 			"@styles/*": ["./src/styles/*"],
-			"@schemas/*": ["./src/schemas/*"]
+			"@schemas/*": ["./src/schemas/*"],
+			"@public/*": ["./public/*"]
 		}
 	}
 }

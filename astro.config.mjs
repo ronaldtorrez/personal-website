@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 import astroLLMsGenerator from 'astro-llms-generate'
 import { defineConfig } from 'astro/config'
 
-const SITE_URL = 'https://ronaldtorrez.com'
+const SITE_URL = import.meta.env.DEV ? 'http://localhost:4321' : 'https://ronaldtorrez.com'
 
 // https://astro.build/config
 export default defineConfig({

@@ -25,9 +25,11 @@ const { title, list } = Props
 <article class="flex flex-col">
 	<Heading
 		level={4}
-		class="text-h6 text-light-3"
-		>{title}</Heading
+		useLink={false}
+		class="text-light-3 text-h6"
 	>
+		{title}
+	</Heading>
 
 	<ul class="flex gap-2">
 		{

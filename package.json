@@ -3,8 +3,10 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "doppler run -p personal-website -c dev -- astro dev",
-		"build": "doppler run -p personal-website -c prd -- astro build",
+		"DOPPLER_DEV": "doppler run -p personal-website -c dev --",
+		"DOPPLER_PROD": "doppler run -p personal-website -c prd --",
+		"dev": "pnpm DOPPLER_DEV astro dev",
+		"build": "pnpm DOPPLER_PROD astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"prepare": "husky",

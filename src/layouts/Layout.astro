@@ -1,6 +1,7 @@
 ---
 import { SEO } from 'astro-seo'
 import { site } from 'astro:config/client'
+import SpeedInsights from '@vercel/speed-insights/astro'
 
 import OGDefault from '@public/og-default.png'
 
@@ -50,6 +51,7 @@ import '@styles/global.css'
 		/>
 	</head>
 	<body>
+		<SpeedInsights />
 		<slot />
 	</body>
 </html>

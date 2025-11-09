@@ -11,7 +11,8 @@
 			"@utils/*": ["./src/utils/*"],
 			"@styles/*": ["./src/styles/*"],
 			"@schemas/*": ["./src/schemas/*"],
-			"@public/*": ["./public/*"]
+			"@public/*": ["./public/*"],
+			"@content/*": ["./src/content/*"]
 		}
 	}
 }

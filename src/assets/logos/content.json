@@ -1,0 +1,193 @@
+{
+	"logos": [
+		{
+			"name": "Adobe Creative Cloud",
+			"file": "adobe.svg",
+			"slug": "adobe",
+			"colors": { "primary": "#EC1C24", "secondary": "#FFFFFF" },
+			"website": "https://www.adobe.com/"
+		},
+		{
+			"name": "Astro",
+			"file": "astro-dark.svg",
+			"slug": "astro-dark",
+			"colors": { "primary": "#FF5D01", "secondary": "#000000" },
+			"website": "https://astro.build/"
+		},
+		{
+			"name": "Bootstrap",
+			"file": "bootstrap.svg",
+			"slug": "bootstrap",
+			"colors": { "primary": "#7952B3", "secondary": "#FFFFFF" },
+			"website": "https://getbootstrap.com/"
+		},
+		{
+			"name": "Bricks Builder",
+			"file": "bricks.svg",
+			"slug": "bricks",
+			"colors": { "primary": "#C41E3A", "secondary": "#1A1A1A" },
+			"website": "https://bricksbuilder.io/"
+		},
+		{
+			"name": "Cloudflare",
+			"file": "cloudflare.svg",
+			"slug": "cloudflare",
+			"colors": { "primary": "#F38020", "secondary": "#FAAE40" },
+			"website": "https://www.cloudflare.com/"
+		},
+		{
+			"name": "cPanel",
+			"file": "cpanel.svg",
+			"slug": "cpanel",
+			"colors": { "primary": "#FF6C2C", "secondary": "#FFFFFF" },
+			"website": "https://cpanel.net/"
+		},
+		{
+			"name": "CSS3",
+			"file": "css.svg",
+			"slug": "css",
+			"colors": { "primary": "#1572B6", "secondary": "#FFFFFF" },
+			"website": "https://www.w3.org/Style/CSS/"
+		},
+		{
+			"name": "DigitalOcean",
+			"file": "digitalocean.svg",
+			"slug": "digitalocean",
+			"colors": { "primary": "#0080FF", "secondary": "#FFFFFF" },
+			"website": "https://www.digitalocean.com/"
+		},
+		{
+			"name": "Docker",
+			"file": "docker.svg",
+			"slug": "docker",
+			"colors": { "primary": "#2496ED", "secondary": "#FFFFFF" },
+			"website": "https://www.docker.com/"
+		},
+		{
+			"name": "Elementor",
+			"file": "elementor.svg",
+			"slug": "elementor",
+			"colors": { "primary": "#92003B", "secondary": "#FFFFFF" },
+			"website": "https://elementor.com/"
+		},
+		{
+			"name": "Figma",
+			"file": "figma.svg",
+			"slug": "figma",
+			"colors": { "primary": "#F24E1E", "secondary": "#000000" },
+			"website": "https://www.figma.com/"
+		},
+		{
+			"name": "Git",
+			"file": "git.svg",
+			"slug": "git",
+			"colors": { "primary": "#F05032", "secondary": "#FFFFFF" },
+			"website": "https://git-scm.com/"
+		},
+		{
+			"name": "JavaScript",
+			"file": "javascript.svg",
+			"slug": "javascript",
+			"colors": { "primary": "#F7DF1E", "secondary": "#000000" },
+			"website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+		},
+		{
+			"name": "jQuery",
+			"file": "jquery.svg",
+			"slug": "jquery",
+			"colors": { "primary": "#0769AD", "secondary": "#FFFFFF" },
+			"website": "https://jquery.com/"
+		},
+		{
+			"name": "Laravel",
+			"file": "laravel.svg",
+			"slug": "laravel",
+			"colors": { "primary": "#FF2D20", "secondary": "#FFFFFF" },
+			"website": "https://laravel.com/"
+		},
+		{
+			"name": "Next.js",
+			"file": "nextjs-dark.svg",
+			"slug": "nextjs-dark",
+			"colors": { "primary": "#000000", "secondary": "#FFFFFF" },
+			"website": "https://nextjs.org/"
+		},
+		{
+			"name": "PHP",
+			"file": "php-dark.svg",
+			"slug": "php-dark",
+			"colors": { "primary": "#777BB4", "secondary": "#000000" },
+			"website": "https://www.php.net/"
+		},
+		{
+			"name": "Postman",
+			"file": "postman.svg",
+			"slug": "postman",
+			"colors": { "primary": "#FF6C37", "secondary": "#FFFFFF" },
+			"website": "https://www.postman.com/"
+		},
+		{
+			"name": "Shopify",
+			"file": "shopify.svg",
+			"slug": "shopify",
+			"colors": { "primary": "#96BF48", "secondary": "#000000" },
+			"website": "https://www.shopify.com/"
+		},
+		{
+			"name": "SiteGround",
+			"file": "siteground.svg",
+			"slug": "siteground",
+			"colors": { "primary": "#6DB33F", "secondary": "#000000" },
+			"website": "https://www.siteground.com/"
+		},
+		{
+			"name": "Sourcegraph",
+			"file": "sourcegraph.svg",
+			"slug": "sourcegraph",
+			"colors": { "primary": "#0A2FFF", "secondary": "#FF4383" },
+			"website": "https://sourcegraph.com/"
+		},
+		{
+			"name": "Tailwind CSS",
+			"file": "tailwindcss.svg",
+			"slug": "tailwindcss",
+			"colors": { "primary": "#38BDF8", "secondary": "#0EA5E9" },
+			"website": "https://tailwindcss.com/"
+		},
+		{
+			"name": "TypeScript",
+			"file": "typescript.svg",
+			"slug": "typescript",
+			"colors": { "primary": "#3178C6", "secondary": "#FFFFFF" },
+			"website": "https://www.typescriptlang.org/"
+		},
+		{
+			"name": "Vercel",
+			"file": "vercel-dark.svg",
+			"slug": "vercel-dark",
+			"colors": { "primary": "#000000", "secondary": "#FFFFFF" },
+			"website": "https://vercel.com/"
+		},
+		{
+			"name": "WooCommerce",
+			"file": "woocommerce.svg",
+			"slug": "woocommerce",
+			"colors": { "primary": "#96588A", "secondary": "#FFFFFF" },
+			"website": "https://woocommerce.com/"
+		},
+		{
+			"name": "WordPress",
+			"file": "wordpress.svg",
+			"slug": "wordpress",
+			"colors": { "primary": "#21759B", "secondary": "#FFFFFF" },
+			"website": "https://wordpress.org/"
+		},
+		{
+			"name": "WPML",
+			"file": "wpml.svg",
+			"slug": "wpml",
+			"colors": { "primary": "#0A74A1", "secondary": "#F47A20" },
+			"website": "https://wpml.org/"
+		}
+	]
+}

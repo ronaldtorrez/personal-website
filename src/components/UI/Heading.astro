@@ -29,6 +29,7 @@ const getID = id ? id : slugify(textContent, { lower: true, strict: true })
 	class={cn('group relative overflow-hidden', classes)}
 	{...rest}
 >
+	<slot />
 	{
 		useLink && (
 			<a
@@ -40,5 +41,4 @@ const getID = id ? id : slugify(textContent, { lower: true, strict: true })
 			</a>
 		)
 	}
-	<slot />
 </Tag>

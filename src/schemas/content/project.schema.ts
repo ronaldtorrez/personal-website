@@ -5,5 +5,5 @@ export const ProjectCollectionsSchema = z.object({
 	description: z.string(),
 	date: z.coerce.date(),
 	tags: z.array(z.string()),
-	tech: z.array(reference('')).min(1).max(6)
+	tech: z.array(reference('logos')).min(1).max(6)
 })

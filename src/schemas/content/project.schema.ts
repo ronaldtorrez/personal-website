@@ -1,9 +1,13 @@
+import { StringNoNSchema } from '@schemas/string.ts'
 import { reference, z } from 'astro:content'
 
 export const ProjectCollectionsSchema = z.object({
-	title: z.string(),
-	description: z.string(),
+	title: StringNoNSchema,
+	description: StringNoNSchema,
 	date: z.coerce.date(),
-	tags: z.array(z.string()),
-	tech: z.array(reference('logos')).min(1).max(6)
+	videoId: StringNoNSchema,
+	backgroundImage: StringNoNSchema,
+	url: StringNoNSchema.url().optional(),
+	tags: z.array(StringNoNSchema).nonempty(),
+	tech: z.array(reference('logos')).nonempty()
 })

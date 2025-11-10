@@ -12,8 +12,8 @@
 		},
 		{
 			"name": "Astro",
-			"slug": "astro-dark",
-			"file": { "default": "astro-dark.svg" },
+			"slug": "astro",
+			"file": { "dark": "astro-dark.svg" },
 			"colors": {
 				"primary": "#FF5D01",
 				"secondary": "#000000"
@@ -152,8 +152,8 @@
 		},
 		{
 			"name": "Next.js",
-			"slug": "nextjs-dark",
-			"file": { "default": "nextjs-dark.svg" },
+			"slug": "nextjs",
+			"file": { "dark": "nextjs-dark.svg" },
 			"colors": {
 				"primary": "#000000",
 				"secondary": "#FFFFFF"
@@ -162,8 +162,8 @@
 		},
 		{
 			"name": "PHP",
-			"slug": "php-dark",
-			"file": { "default": "php-dark.svg" },
+			"slug": "php",
+			"file": { "dark": "php-dark.svg" },
 			"colors": {
 				"primary": "#777BB4",
 				"secondary": "#FFFFFF"
@@ -232,8 +232,8 @@
 		},
 		{
 			"name": "Vercel",
-			"slug": "vercel-dark",
-			"file": { "default": "vercel-dark.svg" },
+			"slug": "vercel",
+			"file": { "dark": "vercel-dark.svg" },
 			"colors": {
 				"primary": "#000000",
 				"secondary": "#FFFFFF"

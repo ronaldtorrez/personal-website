@@ -2,164 +2,272 @@
 	"logos": [
 		{
 			"name": "Adobe Creative Cloud",
-			"file": "adobe.svg",
-			"colors": { "primary": "#EC1C24", "secondary": "#FFFFFF" },
+			"slug": "adobe",
+			"file": { "default": "adobe.svg" },
+			"colors": {
+				"primary": "#FF0000",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.adobe.com/"
 		},
 		{
 			"name": "Astro",
-			"file": "astro-dark.svg",
-			"colors": { "primary": "#FF5D01", "secondary": "#000000" },
+			"slug": "astro-dark",
+			"file": { "default": "astro-dark.svg" },
+			"colors": {
+				"primary": "#FF5D01",
+				"secondary": "#000000"
+			},
 			"website": "https://astro.build/"
 		},
 		{
 			"name": "Bootstrap",
-			"file": "bootstrap.svg",
-			"colors": { "primary": "#7952B3", "secondary": "#FFFFFF" },
+			"slug": "bootstrap",
+			"file": { "default": "bootstrap.svg" },
+			"colors": {
+				"primary": "#7952B3",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://getbootstrap.com/"
 		},
 		{
-			"name": "Bricks Builder",
-			"file": "bricks.svg",
-			"colors": { "primary": "#C41E3A", "secondary": "#1A1A1A" },
+			"name": "Bricks",
+			"slug": "bricks",
+			"file": { "default": "bricks.svg" },
+			"colors": {
+				"primary": "#1E5BE6",
+				"secondary": "#8B5CF6"
+			},
 			"website": "https://bricksbuilder.io/"
 		},
 		{
 			"name": "Cloudflare",
-			"file": "cloudflare.svg",
-			"colors": { "primary": "#F38020", "secondary": "#FAAE40" },
+			"slug": "cloudflare",
+			"file": { "default": "cloudflare.svg" },
+			"colors": {
+				"primary": "#F38020",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.cloudflare.com/"
 		},
 		{
 			"name": "cPanel",
-			"file": "cpanel.svg",
-			"colors": { "primary": "#FF6C2C", "secondary": "#FFFFFF" },
+			"slug": "cpanel",
+			"file": { "default": "cpanel.svg" },
+			"colors": {
+				"primary": "#FF6C2C",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://cpanel.net/"
 		},
 		{
 			"name": "CSS3",
-			"file": "css.svg",
-			"colors": { "primary": "#1572B6", "secondary": "#FFFFFF" },
+			"slug": "css",
+			"file": { "default": "css.svg" },
+			"colors": {
+				"primary": "#1572B6",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.w3.org/Style/CSS/"
 		},
 		{
 			"name": "DigitalOcean",
-			"file": "digitalocean.svg",
-			"colors": { "primary": "#0080FF", "secondary": "#FFFFFF" },
+			"slug": "digitalocean",
+			"file": { "default": "digitalocean.svg" },
+			"colors": {
+				"primary": "#0069FF",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.digitalocean.com/"
 		},
 		{
 			"name": "Docker",
-			"file": "docker.svg",
-			"colors": { "primary": "#2496ED", "secondary": "#FFFFFF" },
+			"slug": "docker",
+			"file": { "default": "docker.svg" },
+			"colors": {
+				"primary": "#2496ED",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.docker.com/"
 		},
 		{
 			"name": "Elementor",
-			"file": "elementor.svg",
-			"colors": { "primary": "#92003B", "secondary": "#FFFFFF" },
+			"slug": "elementor",
+			"file": { "default": "elementor.svg" },
+			"colors": {
+				"primary": "#92003B",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://elementor.com/"
 		},
 		{
 			"name": "Figma",
-			"file": "figma.svg",
-			"colors": { "primary": "#F24E1E", "secondary": "#000000" },
+			"slug": "figma",
+			"file": { "default": "figma.svg" },
+			"colors": {
+				"primary": "#F24E1E",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.figma.com/"
 		},
 		{
 			"name": "Git",
-			"file": "git.svg",
-			"colors": { "primary": "#F05032", "secondary": "#FFFFFF" },
+			"slug": "git",
+			"file": { "default": "git.svg" },
+			"colors": {
+				"primary": "#F05032",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://git-scm.com/"
 		},
 		{
 			"name": "JavaScript",
-			"file": "javascript.svg",
-			"colors": { "primary": "#F7DF1E", "secondary": "#000000" },
+			"slug": "javascript",
+			"file": { "default": "javascript.svg" },
+			"colors": {
+				"primary": "#F7DF1E",
+				"secondary": "#000000"
+			},
 			"website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 		},
 		{
 			"name": "jQuery",
-			"file": "jquery.svg",
-			"colors": { "primary": "#0769AD", "secondary": "#FFFFFF" },
+			"slug": "jquery",
+			"file": { "default": "jquery.svg" },
+			"colors": {
+				"primary": "#0769AD",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://jquery.com/"
 		},
 		{
 			"name": "Laravel",
-			"file": "laravel.svg",
-			"colors": { "primary": "#FF2D20", "secondary": "#FFFFFF" },
+			"slug": "laravel",
+			"file": { "default": "laravel.svg" },
+			"colors": {
+				"primary": "#FF2D20",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://laravel.com/"
 		},
 		{
 			"name": "Next.js",
-			"file": "nextjs-dark.svg",
-			"colors": { "primary": "#000000", "secondary": "#FFFFFF" },
+			"slug": "nextjs-dark",
+			"file": { "default": "nextjs-dark.svg" },
+			"colors": {
+				"primary": "#000000",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://nextjs.org/"
 		},
 		{
 			"name": "PHP",
-			"file": "php-dark.svg",
-			"colors": { "primary": "#777BB4", "secondary": "#000000" },
+			"slug": "php-dark",
+			"file": { "default": "php-dark.svg" },
+			"colors": {
+				"primary": "#777BB4",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.php.net/"
 		},
 		{
 			"name": "Postman",
-			"file": "postman.svg",
-			"colors": { "primary": "#FF6C37", "secondary": "#FFFFFF" },
+			"slug": "postman",
+			"file": { "default": "postman.svg" },
+			"colors": {
+				"primary": "#FF6C37",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.postman.com/"
 		},
 		{
 			"name": "Shopify",
-			"file": "shopify.svg",
-			"colors": { "primary": "#96BF48", "secondary": "#000000" },
+			"slug": "shopify",
+			"file": { "default": "shopify.svg" },
+			"colors": {
+				"primary": "#95BF47",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.shopify.com/"
 		},
 		{
 			"name": "SiteGround",
-			"file": "siteground.svg",
-			"colors": { "primary": "#6DB33F", "secondary": "#000000" },
+			"slug": "siteground",
+			"file": { "default": "siteground.svg" },
+			"colors": {
+				"primary": "#5CAB5D",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.siteground.com/"
 		},
 		{
 			"name": "Sourcegraph",
-			"file": "sourcegraph.svg",
-			"colors": { "primary": "#0A2FFF", "secondary": "#FF4383" },
+			"slug": "sourcegraph",
+			"file": { "default": "sourcegraph.svg" },
+			"colors": {
+				"primary": "#00B4F2",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://sourcegraph.com/"
 		},
 		{
 			"name": "Tailwind CSS",
-			"file": "tailwindcss.svg",
-			"colors": { "primary": "#38BDF8", "secondary": "#0EA5E9" },
+			"slug": "tailwindcss",
+			"file": { "default": "tailwindcss.svg" },
+			"colors": {
+				"primary": "#06B6D4",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://tailwindcss.com/"
 		},
 		{
 			"name": "TypeScript",
-			"file": "typescript.svg",
-			"colors": { "primary": "#3178C6", "secondary": "#FFFFFF" },
+			"slug": "typescript",
+			"file": { "default": "typescript.svg" },
+			"colors": {
+				"primary": "#3178C6",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://www.typescriptlang.org/"
 		},
 		{
 			"name": "Vercel",
-			"file": "vercel-dark.svg",
-			"colors": { "primary": "#000000", "secondary": "#FFFFFF" },
+			"slug": "vercel-dark",
+			"file": { "default": "vercel-dark.svg" },
+			"colors": {
+				"primary": "#000000",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://vercel.com/"
 		},
 		{
 			"name": "WooCommerce",
-			"file": "woocommerce.svg",
-			"colors": { "primary": "#96588A", "secondary": "#FFFFFF" },
+			"slug": "woocommerce",
+			"file": { "default": "woocommerce.svg" },
+			"colors": {
+				"primary": "#96588A",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://woocommerce.com/"
 		},
 		{
 			"name": "WordPress",
-			"file": "wordpress.svg",
-			"colors": { "primary": "#21759B", "secondary": "#FFFFFF" },
+			"slug": "wordpress",
+			"file": { "default": "wordpress.svg" },
+			"colors": {
+				"primary": "#21759B",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://wordpress.org/"
 		},
 		{
 			"name": "WPML",
-			"file": "wpml.svg",
-			"colors": { "primary": "#0A74A1", "secondary": "#F47A20" },
+			"slug": "wpml",
+			"file": { "default": "wpml.svg" },
+			"colors": {
+				"primary": "#0E6EB0",
+				"secondary": "#FFFFFF"
+			},
 			"website": "https://wpml.org/"
 		}
 	]

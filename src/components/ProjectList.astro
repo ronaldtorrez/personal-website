@@ -1,11 +1,11 @@
 ---
 import Heading from '@components/UI/Heading.astro'
 
-import { MuxPlayer } from '@mux/mux-player-astro'
 import { Picture } from 'astro:assets'
 import { z } from 'astro:content'
 import type { SvgComponent } from 'astro/types'
 import { StringNoNSchema } from '@schemas/string.ts'
+import Video from './UI/Video.astro'
 
 const Schema = z.object({
 	name: StringNoNSchema.describe('Name of the project'),
@@ -32,21 +32,9 @@ const { name, description, videoId, icons, backgroundImage } = Props
 			alt={description}
 			class="absolute top-0 left-0 h-full w-full object-cover object-center opacity-50 grayscale transition-all transition-discrete group-hover:opacity-100 group-hover:filter-none"
 		/>
-		<MuxPlayer
-			class="aspect-4/3 w-full overflow-clip rounded-2xl transition [--controls:none] [--play-button:none] [--volume-range:none]"
-			playbackId={videoId}
-			metadata={{
-				video_title: name + ' - ' + description
-			}}
-			poster=`https://image.mux.com/${videoId}/thumbnail.png?time=0`
-			storyboardSrc=`https://image.mux.com/${videoId}/storyboard.vtt?format=webp&asset_start_time=0&asset_end_time=20`
-			thumbnailTime={1}
-			theme="microvideo"
-			muted={true}
-			nohotkeys={true}
-			autoplay={true}
-			loop={true}
-		/>
+
+		<Video videoId={videoId} />
+
 		<div class="z-1 flex flex-wrap items-center justify-center">
 			{
 				icons.map(Icon => (

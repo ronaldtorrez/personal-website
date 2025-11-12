@@ -1,0 +1,18 @@
+---
+import { MuxPlayer } from '@mux/mux-player-astro'
+
+const { videoId } = Astro.props
+---
+
+<MuxPlayer
+	class="aspect-4/3 w-full overflow-clip rounded-2xl transition [--controls:none] [--play-button:none] [--volume-range:none]"
+	playbackId={videoId}
+	poster=`https://image.mux.com/${videoId}/thumbnail.png?time=0`
+	storyboardSrc=`https://image.mux.com/${videoId}/storyboard.vtt?format=webp&asset_start_time=0&asset_end_time=20`
+	thumbnailTime={1}
+	theme="microvideo"
+	muted={true}
+	nohotkeys={true}
+	autoplay={true}
+	loop={true}
+/>

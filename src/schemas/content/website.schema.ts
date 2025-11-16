@@ -1,7 +1,7 @@
 import { StringNoNSchema } from '@schemas/string.ts'
 import { reference, z } from 'astro:content'
 
-export const ProjectCollectionsSchema = z.object({
+export const WebsiteCollectionsSchema = z.object({
 	title: StringNoNSchema,
 	description: StringNoNSchema,
 	date: z.coerce.date(),
@@ -9,5 +9,5 @@ export const ProjectCollectionsSchema = z.object({
 	backgroundImage: StringNoNSchema,
 	url: StringNoNSchema.url().optional(),
 	tags: z.array(StringNoNSchema).nonempty(),
-	tech: z.array(reference('logos')).nonempty()
+	technologies: z.array(reference('logos')).nonempty()
 })

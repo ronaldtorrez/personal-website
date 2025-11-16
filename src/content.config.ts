@@ -1,5 +1,5 @@
 import { LogoCollectionsSchema } from '@schemas/content/logo.schema.ts'
-import { ProjectCollectionsSchema } from '@schemas/content/project.schema.ts'
+import { WebsiteCollectionsSchema } from '@schemas/content/website.schema.ts'
 import { file, glob } from 'astro/loaders'
 import { defineCollection } from 'astro:content'
 
@@ -8,12 +8,12 @@ export const logoCollection = defineCollection({
 	schema: LogoCollectionsSchema
 })
 
-const projectCollection = defineCollection({
-	loader: glob({ pattern: '**/*.mdx', base: './src/content/projects' }),
-	schema: ProjectCollectionsSchema
+const websiteCollection = defineCollection({
+	loader: glob({ pattern: '**/*.mdx', base: './src/content/projects/websites' }),
+	schema: WebsiteCollectionsSchema
 })
 
 export const collections = {
-	projects: projectCollection,
+	websites: websiteCollection,
 	logos: logoCollection
 }

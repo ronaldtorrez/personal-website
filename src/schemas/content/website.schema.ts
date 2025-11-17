@@ -1,14 +1,16 @@
 import { StringNoNSchema } from '@schemas/string.ts'
 import { reference, z } from 'astro:content'
 
+const ImagePath = '/projects/websites/'
+
 export const WebsiteCollectionsSchema = z.object({
 	title: StringNoNSchema,
 	description: StringNoNSchema,
 	shortDescription: StringNoNSchema.optional(),
 	date: z.coerce.date(),
 	videoId: StringNoNSchema,
-	videoThumbnail: StringNoNSchema,
-	backgroundImage: StringNoNSchema,
+	videoThumbnail: StringNoNSchema.transform(val => ImagePath + val),
+	backgroundImage: StringNoNSchema.transform(val => ImagePath + val),
 	url: StringNoNSchema.url().optional(),
 	tags: z.array(StringNoNSchema).nonempty(),
 	technologies: z.array(reference('logos')).nonempty()

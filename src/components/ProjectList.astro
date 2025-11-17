@@ -37,15 +37,16 @@ const logoModules = import.meta.glob(`/src/assets/logos/**/*.{svg,png}`, { eager
 					title={title}
 				>
 					<Picture
-						src={new URL(backgroundImage, Astro.site?.href).href}
+						src={backgroundImage}
 						alt={description}
-						inferSize={true}
+						width={480}
+						height={270}
 						class="absolute top-0 left-0 h-full w-full object-cover object-center opacity-50 grayscale transition-all transition-discrete group-hover:opacity-100 group-hover:filter-none"
 					/>
 
 					<Video
 						videoId={videoId}
-						thumbnail={new URL(videoThumbnail, Astro.site?.href).href}
+						thumbnail={videoThumbnail}
 					/>
 
 					<div class="z-1 flex flex-wrap items-center justify-center">

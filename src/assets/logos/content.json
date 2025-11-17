@@ -3,7 +3,7 @@
 		{
 			"name": "Adobe Creative Cloud",
 			"slug": "adobe",
-			"file": { "default": "adobe.svg" },
+			"files": { "default": "adobe.svg" },
 			"colors": {
 				"primary": "#FF0000",
 				"secondary": "#FFFFFF"
@@ -13,7 +13,7 @@
 		{
 			"name": "Astro",
 			"slug": "astro",
-			"file": { "dark": "astro-dark.svg" },
+			"files": { "dark": "astro-dark.svg" },
 			"colors": {
 				"primary": "#FF5D01",
 				"secondary": "#000000"
@@ -23,7 +23,7 @@
 		{
 			"name": "Bootstrap",
 			"slug": "bootstrap",
-			"file": { "default": "bootstrap.svg" },
+			"files": { "default": "bootstrap.svg" },
 			"colors": {
 				"primary": "#7952B3",
 				"secondary": "#FFFFFF"
@@ -33,7 +33,7 @@
 		{
 			"name": "Bricks",
 			"slug": "bricks",
-			"file": { "default": "bricks.svg" },
+			"files": { "default": "bricks.svg" },
 			"colors": {
 				"primary": "#1E5BE6",
 				"secondary": "#8B5CF6"
@@ -43,7 +43,7 @@
 		{
 			"name": "Cloudflare",
 			"slug": "cloudflare",
-			"file": { "default": "cloudflare.svg" },
+			"files": { "default": "cloudflare.svg" },
 			"colors": {
 				"primary": "#F38020",
 				"secondary": "#FFFFFF"
@@ -53,7 +53,7 @@
 		{
 			"name": "cPanel",
 			"slug": "cpanel",
-			"file": { "default": "cpanel.svg" },
+			"files": { "default": "cpanel.svg" },
 			"colors": {
 				"primary": "#FF6C2C",
 				"secondary": "#FFFFFF"
@@ -63,7 +63,7 @@
 		{
 			"name": "CSS3",
 			"slug": "css",
-			"file": { "default": "css.svg" },
+			"files": { "default": "css.svg" },
 			"colors": {
 				"primary": "#1572B6",
 				"secondary": "#FFFFFF"
@@ -73,7 +73,7 @@
 		{
 			"name": "DigitalOcean",
 			"slug": "digitalocean",
-			"file": { "default": "digitalocean.svg" },
+			"files": { "default": "digitalocean.svg" },
 			"colors": {
 				"primary": "#0069FF",
 				"secondary": "#FFFFFF"
@@ -83,7 +83,7 @@
 		{
 			"name": "Docker",
 			"slug": "docker",
-			"file": { "default": "docker.svg" },
+			"files": { "default": "docker.svg" },
 			"colors": {
 				"primary": "#2496ED",
 				"secondary": "#FFFFFF"
@@ -93,7 +93,7 @@
 		{
 			"name": "Elementor",
 			"slug": "elementor",
-			"file": { "default": "elementor.svg" },
+			"files": { "default": "elementor.svg" },
 			"colors": {
 				"primary": "#92003B",
 				"secondary": "#FFFFFF"
@@ -103,7 +103,7 @@
 		{
 			"name": "Figma",
 			"slug": "figma",
-			"file": { "default": "figma.svg" },
+			"files": { "default": "figma.svg" },
 			"colors": {
 				"primary": "#F24E1E",
 				"secondary": "#FFFFFF"
@@ -113,7 +113,7 @@
 		{
 			"name": "Git",
 			"slug": "git",
-			"file": { "default": "git.svg" },
+			"files": { "default": "git.svg" },
 			"colors": {
 				"primary": "#F05032",
 				"secondary": "#FFFFFF"
@@ -123,7 +123,7 @@
 		{
 			"name": "JavaScript",
 			"slug": "javascript",
-			"file": { "default": "javascript.svg" },
+			"files": { "default": "javascript.svg" },
 			"colors": {
 				"primary": "#F7DF1E",
 				"secondary": "#000000"
@@ -133,7 +133,7 @@
 		{
 			"name": "jQuery",
 			"slug": "jquery",
-			"file": { "default": "jquery.svg" },
+			"files": { "default": "jquery.svg" },
 			"colors": {
 				"primary": "#0769AD",
 				"secondary": "#FFFFFF"
@@ -143,7 +143,7 @@
 		{
 			"name": "Laravel",
 			"slug": "laravel",
-			"file": { "default": "laravel.svg" },
+			"files": { "default": "laravel.svg" },
 			"colors": {
 				"primary": "#FF2D20",
 				"secondary": "#FFFFFF"
@@ -153,7 +153,7 @@
 		{
 			"name": "Next.js",
 			"slug": "nextjs",
-			"file": { "dark": "nextjs-dark.svg" },
+			"files": { "dark": "nextjs-dark.svg" },
 			"colors": {
 				"primary": "#000000",
 				"secondary": "#FFFFFF"
@@ -163,7 +163,7 @@
 		{
 			"name": "PHP",
 			"slug": "php",
-			"file": { "dark": "php-dark.svg" },
+			"files": { "dark": "php-dark.svg" },
 			"colors": {
 				"primary": "#777BB4",
 				"secondary": "#FFFFFF"
@@ -173,7 +173,7 @@
 		{
 			"name": "Postman",
 			"slug": "postman",
-			"file": { "default": "postman.svg" },
+			"files": { "default": "postman.svg" },
 			"colors": {
 				"primary": "#FF6C37",
 				"secondary": "#FFFFFF"
@@ -183,7 +183,7 @@
 		{
 			"name": "Shopify",
 			"slug": "shopify",
-			"file": { "default": "shopify.svg" },
+			"files": { "default": "shopify.svg" },
 			"colors": {
 				"primary": "#95BF47",
 				"secondary": "#FFFFFF"
@@ -193,7 +193,7 @@
 		{
 			"name": "SiteGround",
 			"slug": "siteground",
-			"file": { "default": "siteground.svg" },
+			"files": { "default": "siteground.svg" },
 			"colors": {
 				"primary": "#5CAB5D",
 				"secondary": "#FFFFFF"
@@ -203,7 +203,7 @@
 		{
 			"name": "Sourcegraph",
 			"slug": "sourcegraph",
-			"file": { "default": "sourcegraph.svg" },
+			"files": { "default": "sourcegraph.svg" },
 			"colors": {
 				"primary": "#00B4F2",
 				"secondary": "#FFFFFF"
@@ -213,7 +213,7 @@
 		{
 			"name": "Tailwind CSS",
 			"slug": "tailwindcss",
-			"file": { "default": "tailwindcss.svg" },
+			"files": { "default": "tailwindcss.svg" },
 			"colors": {
 				"primary": "#06B6D4",
 				"secondary": "#FFFFFF"
@@ -223,7 +223,7 @@
 		{
 			"name": "TypeScript",
 			"slug": "typescript",
-			"file": { "default": "typescript.svg" },
+			"files": { "default": "typescript.svg" },
 			"colors": {
 				"primary": "#3178C6",
 				"secondary": "#FFFFFF"
@@ -233,7 +233,7 @@
 		{
 			"name": "Vercel",
 			"slug": "vercel",
-			"file": { "dark": "vercel-dark.svg" },
+			"files": { "dark": "vercel-dark.svg" },
 			"colors": {
 				"primary": "#000000",
 				"secondary": "#FFFFFF"
@@ -243,7 +243,7 @@
 		{
 			"name": "WooCommerce",
 			"slug": "woocommerce",
-			"file": { "default": "woocommerce.svg" },
+			"files": { "default": "woocommerce.svg" },
 			"colors": {
 				"primary": "#96588A",
 				"secondary": "#FFFFFF"
@@ -253,7 +253,7 @@
 		{
 			"name": "WordPress",
 			"slug": "wordpress",
-			"file": { "default": "wordpress.svg" },
+			"files": { "default": "wordpress.svg" },
 			"colors": {
 				"primary": "#21759B",
 				"secondary": "#FFFFFF"
@@ -263,7 +263,7 @@
 		{
 			"name": "WPML",
 			"slug": "wpml",
-			"file": { "default": "wpml.svg" },
+			"files": { "default": "wpml.svg" },
 			"colors": {
 				"primary": "#0E6EB0",
 				"secondary": "#FFFFFF"

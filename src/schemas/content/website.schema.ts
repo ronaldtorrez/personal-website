@@ -12,6 +12,5 @@ export const WebsiteCollectionsSchema = z.object({
 	videoThumbnail: StringNoNSchema.transform(val => ImagePath + val),
 	backgroundImage: StringNoNSchema.transform(val => ImagePath + val),
 	url: StringNoNSchema.url().optional(),
-	tags: z.array(StringNoNSchema).nonempty(),
 	technologies: z.array(reference('logos')).nonempty()
 })

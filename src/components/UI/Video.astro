@@ -6,7 +6,7 @@ import { z } from 'astro:content'
 
 const VideoSchema = z.object({
 	videoId: StringNoNSchema,
-	thumbnail: StringNoNSchema.url().optional(),
+	thumbnail: StringNoNSchema.optional(),
 	class: StringNoNSchema.optional()
 })
 

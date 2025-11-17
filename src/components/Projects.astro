@@ -1,80 +1,40 @@
 ---
-import Project1Bg from '@assets/projects/project-1-bg.webp'
+import { getCollection } from 'astro:content'
 
-import Wordpress from '@assets/logos/wordpress.svg'
-import Woocommerce from '@assets/logos/woocommerce.svg'
-import Wpml from '@assets/logos/wpml.svg'
-import Elementor from '@assets/logos/elementor.svg'
 import Heading from '@components/UI/Heading.astro'
-import ComingSoon from './UI/ComingSoon.astro'
 
 import ProjectList from './ProjectList.astro'
+
+const allWebsitesContent = (await getCollection('websites')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
 ---
 
 <section id="projects">
 	<div class="container">
-		<ComingSoon>
+		<Heading
+			level={2}
+			class="text-light-2"
+		>
+			SELECTED WORKS /
+		</Heading>
+
+		<div class="mb-20 md:grid md:grid-cols-12">
 			<Heading
-				level={2}
-				class="text-light-2"
-				>SELECTED WORKS /</Heading
+				level={3}
+				class="md:col-span-7 md:col-start-6"
 			>
+				Website Development
+			</Heading>
 
-			<div class="mb-20 md:grid md:grid-cols-12">
-				<Heading
-					level={3}
-					class="md:col-span-7 md:col-start-6"
-					>Projects</Heading
-				>
+			<p class="md:col-span-7 md:col-start-6">
+				I create digital experiences where design and technology meet, blending utility, emotion, and detail
+				into something truly meaningful.
+			</p>
+		</div>
 
-				<p class="md:col-span-7 md:col-start-6">
-					I create digital experiences where design and technology meet, blending utility, emotion, and detail
-					into something truly meaningful.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-20">
-				<ProjectList
-					name="NURA"
-					description="Modern Marketing Website"
-					videoId="azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8"
-					backgroundImage={Project1Bg}
-					icons={[Wordpress, Woocommerce, Wpml, Elementor]}
-				/>
-				<ProjectList
-					name="Job Portal"
-					description="Full-Stack Recruitment Platform"
-					videoId="ZV01irv5jPmaRLo6XEcm5o4QHrEd9g6Rr5GyqdMd1R6g"
-					backgroundImage={Project1Bg}
-					icons={[Wordpress, Woocommerce, Wpml, Elementor]}
-				/><ProjectList
-					name="NURA"
-					description="Modern Marketing Website"
-					videoId="azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8"
-					backgroundImage={Project1Bg}
-					icons={[Wordpress, Woocommerce, Wpml, Elementor]}
-				/>
-				<ProjectList
-					name="Job Portal"
-					description="Full-Stack Recruitment Platform"
-					videoId="ZV01irv5jPmaRLo6XEcm5o4QHrEd9g6Rr5GyqdMd1R6g"
-					backgroundImage={Project1Bg}
-					icons={[Wordpress, Woocommerce, Wpml, Elementor]}
-				/><ProjectList
-					name="NURA"
-					description="Modern Marketing Website"
-					videoId="azQvkfKE59bPfoxN6100Dbm8Hhsl29Pc15xIfFCVrnc8"
-					backgroundImage={Project1Bg}
-					icons={[Wordpress, Woocommerce, Wpml, Elementor]}
-				/>
-				<ProjectList
-					name="Job Portal"
-					description="Full-Stack Recruitment Platform"
-					videoId="ZV01irv5jPmaRLo6XEcm5o4QHrEd9g6Rr5GyqdMd1R6g"
-					backgroundImage={Project1Bg}
-					icons={[Wordpress, Woocommerce, Wpml, Elementor]}
-				/>
-			</div>
-		</ComingSoon>
+		<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-20">
+			<ProjectList collections={allWebsitesContent} />
+		</div>
 	</div>
 </section>

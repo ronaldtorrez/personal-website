@@ -2,7 +2,7 @@ import { StringNoNSchema, StringSchema } from '@schemas/string.ts'
 import { HEXADECIMAL_COLOR_REGEX } from '@utils/const.ts'
 import { z } from 'astro:content'
 
-const LogoPath = 'src/assets/logos/'
+const LogoPath = '/src/assets/logos/'
 
 export const LogoCollectionsSchema = z.object({
 	name: StringNoNSchema,

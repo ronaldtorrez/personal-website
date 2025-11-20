@@ -21,11 +21,11 @@ const { text, icon: Icon, href, class: classes, ...rest } = props as Props
 <a
 	href={href}
 	class={cn(
-		'no-styles group text-h5 border-accent hover:bg-accent focus:bg-accent flex flex-col items-center justify-center rounded-2xl border-4 p-10 font-bold',
+		'no-styles text-center group text-h5 border-accent hover:bg-accent focus:bg-accent flex flex-col items-center justify-center rounded-2xl border-4 p-10 font-bold',
 		classes
 	)}
 	{...rest}
 >
 	{text}
-	<Icon class="size-20 transition group-hover:-rotate-45 group-focus:-rotate-45" />
+	<Icon class="size-14 transition group-hover:-rotate-45 group-focus:-rotate-45 md:size-20" />
 </a>

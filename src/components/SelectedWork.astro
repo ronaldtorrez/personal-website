@@ -9,7 +9,7 @@ import ArrowCircleRight from 'phosphor-astro/ArrowCircleRightDuotone.astro'
 const websitesEntries = await getCollection('websites')
 ---
 
-<section class="gap-20 p-0">
+<section class="p-0 md:gap-20">
 	<div class="md:grid md:grid-cols-12">
 		<Heading
 			level={3}
@@ -27,7 +27,7 @@ const websitesEntries = await getCollection('websites')
 		{
 			websitesEntries
 				.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-				.slice(0, 6)
+				.slice(0, 5)
 				.map(entry => <WebsiteItem entry={entry} />)
 		}
 		<CardViewMore

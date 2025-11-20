@@ -1,0 +1,31 @@
+---
+import { StringNoNSchema } from '@schemas/string.ts'
+import { z } from 'astro:content'
+import type { HTMLAttributes, SvgComponent } from 'astro/types'
+import { cn } from '@utils/css'
+
+type LinkProps = { href: string } & HTMLAttributes<'a'>
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Schema = z.object({
+	text: StringNoNSchema,
+	icon: z.custom<SvgComponent>()
+})
+
+type Props = z.input<typeof Schema> & LinkProps
+
+const props = Astro.props as Props
+const { text, icon: Icon, href, class: classes, ...rest } = props as Props
+---
+
+<a
+	href={href}
+	class={cn(
+		'no-styles group text-h5 border-accent hover:bg-accent focus:bg-accent flex flex-col items-center justify-center rounded-2xl border-4 p-10 font-bold',
+		classes
+	)}
+	{...rest}
+>
+	{text}
+	<Icon class="size-20 transition group-hover:-rotate-45 group-focus:-rotate-45" />
+</a>

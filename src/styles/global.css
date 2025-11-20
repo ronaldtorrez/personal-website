@@ -14,6 +14,7 @@
 	--color-light: var(--color-gray-50);
 	--color-light-2: var(--color-gray-200);
 	--color-light-3: var(--color-gray-300);
+	--color-light-4: var(--color-gray-400);
 
 	--text-h1: clamp(4rem, 7vw + 1rem, 10rem);
 	--text-h2: clamp(3rem, 5vw + 1rem, 8rem);

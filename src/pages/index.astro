@@ -1,23 +1,18 @@
 ---
-import { getCollection } from 'astro:content'
-
 import Header from '@components/Header.astro'
 import Services from '@components/Services.astro'
 import Heading from '@components/UI/Heading.astro'
-import WebsiteItem from '@components/WebsiteItem.astro'
 import SelectedWork from '@components/SelectedWork.astro'
 import Skills from '@components/Skills.astro'
 import Contact from '@components/Contact.astro'
 import Footer from '@components/Footer.astro'
 import AboutMe from '@components/AboutMe.astro'
 import Layout from '@layouts/Layout.astro'
-
-const websitesEntries = await getCollection('websites')
 ---
 
 <Layout>
 	<Header />
-	<div class="bg-secondary rounded-4xl py-10 text-gray-400 md:pb-30">
+	<div class="bg-secondary text-light-4 rounded-4xl py-10 md:pb-30">
 		<div
 			id="projects"
 			class="container"
@@ -28,17 +23,7 @@ const websitesEntries = await getCollection('websites')
 			>
 				SELECTED WORKS /
 			</Heading>
-			<SelectedWork
-				title="Website Development"
-				description="I create digital experiences where design and technology meet, blending utility, emotion, and detail into something truly meaningful."
-			>
-				{
-					websitesEntries
-						.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-						.slice(0, 6)
-						.map(entry => <WebsiteItem entry={entry} />)
-				}
-			</SelectedWork>
+			<SelectedWork />
 		</div>
 	</div>
 	<Services />

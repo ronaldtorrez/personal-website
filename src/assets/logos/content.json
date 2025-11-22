@@ -269,6 +269,236 @@
 				"secondary": "#FFFFFF"
 			},
 			"website": "https://wpml.org/"
+		},
+		{
+			"name": "JetAppointment",
+			"slug": "jetappointment",
+			"files": { "default": "jetappointment.svg" },
+			"colors": {
+				"primary": "#1BACD7",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetappointment/"
+		},
+		{
+			"name": "JetBlocks",
+			"slug": "jetblocks",
+			"files": { "default": "jetblocks.svg" },
+			"colors": {
+				"primary": "#E37828",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetblocks/"
+		},
+		{
+			"name": "JetBlog",
+			"slug": "jetblog",
+			"files": { "default": "jetblog.svg" },
+			"colors": {
+				"primary": "#F9526F",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetblog/"
+		},
+		{
+			"name": "JetBooking",
+			"slug": "jetbooking",
+			"files": { "default": "jetbooking.svg" },
+			"colors": {
+				"primary": "#5973F6",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetbooking/"
+		},
+		{
+			"name": "JetCompare&Wishlist",
+			"slug": "jetcomparewishlist",
+			"files": { "default": "jetcomparewishlist.svg" },
+			"colors": {
+				"primary": "#338FF3",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetcomparewishlist/"
+		},
+		{
+			"name": "JetElements",
+			"slug": "jetelements",
+			"files": { "default": "jetelements.svg" },
+			"colors": {
+				"primary": "#F651C2",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetelements/"
+		},
+		{
+			"name": "JetEngine",
+			"slug": "jetengine",
+			"files": { "default": "jetengine.svg" },
+			"colors": {
+				"primary": "#8D73E8",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetengine/"
+		},
+		{
+			"name": "JetFormBuilder",
+			"slug": "jetformbuilder",
+			"files": { "default": "jetformbuilder.svg" },
+			"colors": {
+				"primary": "#4B78F9",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetformbuilder/"
+		},
+		{
+			"name": "JetGridBuilder",
+			"slug": "jetgridbuilder",
+			"files": { "default": "jetgridbuilder.svg" },
+			"colors": {
+				"primary": "#26BF51",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetgridbuilder/"
+		},
+		{
+			"name": "JetMenu",
+			"slug": "jetmenu",
+			"files": { "default": "jetmenu.svg" },
+			"colors": {
+				"primary": "#89A524",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetmenu/"
+		},
+		{
+			"name": "JetPopup",
+			"slug": "jetpopup",
+			"files": { "default": "jetpopup.svg" },
+			"colors": {
+				"primary": "#4977F9",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetpopup/"
+		},
+		{
+			"name": "JetProductGallery",
+			"slug": "jetproductgallery",
+			"files": { "default": "jetproductgallery.svg" },
+			"colors": {
+				"primary": "#1BBAB7",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetproductgallery/"
+		},
+		{
+			"name": "JetReviews",
+			"slug": "jetreviews",
+			"files": { "default": "jetrewiews.svg" },
+			"colors": {
+				"primary": "#EE8121",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetreviews/"
+		},
+		{
+			"name": "JetSearch",
+			"slug": "jetsearch",
+			"files": { "default": "jetsearch.svg" },
+			"colors": {
+				"primary": "#F85581",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetsearch/"
+		},
+		{
+			"name": "JetSmartFilters",
+			"slug": "jetsmartfilters",
+			"files": { "default": "jetsmartfilters.svg" },
+			"colors": {
+				"primary": "#F35D63",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetsmartfilters/"
+		},
+		{
+			"name": "JetStyleManager",
+			"slug": "jetstylemanager",
+			"files": { "default": "jetstylemanager.svg" },
+			"colors": {
+				"primary": "#A7B216",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetstylemanager/"
+		},
+		{
+			"name": "JetTabs",
+			"slug": "jettabs",
+			"files": { "default": "jettabs.svg" },
+			"colors": {
+				"primary": "#1DA1E4",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jettabs/"
+		},
+		{
+			"name": "JetThemeCore",
+			"slug": "jetthemecore",
+			"files": { "default": "jetthemecore.svg" },
+			"colors": {
+				"primary": "#E2AE14",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetthemecore/"
+		},
+		{
+			"name": "JetTricks",
+			"slug": "jettricks",
+			"files": { "default": "jettricks.svg" },
+			"colors": {
+				"primary": "#439DC9",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jettricks/"
+		},
+		{
+			"name": "JetWooBuilder",
+			"slug": "jetwoobuilder",
+			"files": { "default": "jetwoobuilder.svg" },
+			"colors": {
+				"primary": "#FF5C35",
+				"secondary": "#192732"
+			},
+			"website": "https://crocoblock.com/plugins/jetwoobuilder/"
+		},
+		{
+			"name": "HubSpot",
+			"slug": "hubspot",
+			"files": { "default": "hubspot.svg" },
+			"colors": {
+				"primary": "#D75AEB",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://crocoblock.com/plugins/jetwoobuilder/"
+		},
+		{
+			"name": "Wordfence",
+			"slug": "wordfence",
+			"files": { "default": "wordfence.svg" },
+			"colors": {
+				"primary": "#218dc1",
+				"secondary": "#FFFFFF"
+			},
+			"website": "https://www.wordfence.com/"
+		},
+		{
+			"name": "Rank Math",
+			"slug": "rankmath",
+			"files": { "default": "rankmath.svg" },
+			"colors": {
+				"primary": "#6666C3",
+				"secondary": "#1E1E1E"
+			},
+			"website": "https://www.wordfence.com/"
 		}
 	]
 }

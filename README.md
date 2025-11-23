@@ -174,6 +174,44 @@ pnpm preview
 
 ---
 
+## 🔐 Environment Variables
+
+This project is prepared to use **Doppler** (https://doppler.com) to manage environment variables for both `dev` and
+`prod` environments.
+
+The main variables are:
+
+- `FORM_BASE_URL` – Base URL for your form backend or service.
+- `FORM_EMAIL` – Email address used as the main contact/recipient.
+- `FORM_SUBMIT_URL` – Full URL endpoint where form submissions are sent.
+- `PUBLIC_CLOUDINARY_CLOUD_NAME` – Cloud name used for Cloudinary assets on the public side.
+
+### Using Doppler (recommended)
+
+If you use Doppler, you can create projects and configs (e.g. `dev` and `prod`), define these variables there, and then
+run the existing npm scripts that integrate Doppler into the Astro dev/build commands (see `package.json`). This keeps
+secrets out of your local `.env` files and makes it easier to keep environments in sync.
+
+### Using a local `.env` file (alternative)
+
+If you don’t want to use Doppler, you can create a local `.env` file instead. For example:
+
+```bash
+FORM_BASE_URL="https://api.your-service.com"
+FORM_EMAIL="you@example.com"
+FORM_SUBMIT_URL="https://api.your-service.com/forms/contact"
+PUBLIC_CLOUDINARY_CLOUD_NAME="your-cloud-name"
+```
+
+**Important:**
+
+- Never commit `.env` files or real secrets to the repository.
+- Use `.gitignore` to ensure `.env` is ignored.
+- For production deployments (Vercel, Netlify, etc.), set these variables directly in the hosting provider’s
+  environment settings.
+
+---
+
 ## ✏️ Managing Content
 
 ### Projects (Websites)

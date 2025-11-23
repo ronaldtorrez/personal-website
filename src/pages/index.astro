@@ -1,7 +1,6 @@
 ---
 import Header from '@components/Header.astro'
 import Services from '@components/Services.astro'
-import Heading from '@components/UI/Heading.astro'
 import SelectedWork from '@components/SelectedWork.astro'
 import Skills from '@components/Skills.astro'
 import Contact from '@components/Contact.astro'
@@ -12,20 +11,7 @@ import Layout from '@layouts/Layout.astro'
 
 <Layout>
 	<Header />
-	<div class="bg-secondary text-light-4 rounded-4xl px-6 py-10 md:pb-30">
-		<div
-			id="projects"
-			class="container"
-		>
-			<Heading
-				level={2}
-				class="text-light-2"
-			>
-				SELECTED WORKS /
-			</Heading>
-			<SelectedWork />
-		</div>
-	</div>
+	<SelectedWork />
 	<Services />
 	<Skills />
 	<AboutMe />

@@ -6,34 +6,53 @@ import CardViewMore from '@components/CardViewMore.astro'
 
 import ArrowCircleRight from 'phosphor-astro/ArrowCircleRightDuotone.astro'
 
-const websitesEntries = await getCollection('websites')
+const websitesEntries = (await getCollection('websites'))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 7)
 ---
 
-<section class="p-0 md:gap-20">
-	<div class="md:grid md:grid-cols-12">
+<div class="bg-secondary text-light-4 rounded-4xl px-6 py-30">
+	<div
+		id="projects"
+		class="container"
+	>
 		<Heading
-			level={3}
-			class="md:col-span-7 md:col-start-6"
+			level={2}
+			class="text-light-2"
 		>
-			Website Development
+			SELECTED WORKS /
 		</Heading>
-		<p class="md:col-span-7 md:col-start-6">
-			I create digital experiences where design and technology meet, blending utility, emotion, and detail into
-			something truly meaningful.
-		</p>
-	</div>
 
-	<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-20">
-		{
-			websitesEntries
-				.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-				.slice(0, 5)
-				.map(entry => <WebsiteItem entry={entry} />)
-		}
-		<CardViewMore
-			href="/projects/websites"
-			text="View More Websites"
-			icon={ArrowCircleRight}
-		/>
+		<section class="p-0 md:gap-20">
+			<div class="md:grid md:grid-cols-12">
+				<Heading
+					level={3}
+					class="md:col-span-7 md:col-start-6"
+				>
+					Website Development
+				</Heading>
+				<p class="md:col-span-7 md:col-start-6">
+					I create digital experiences where design and technology meet, blending utility, emotion, and detail
+					into something truly meaningful.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-20">
+				{
+					websitesEntries
+						.slice(0, websitesEntries.length > 6 ? 5 : 6)
+						.map(entry => <WebsiteItem entry={entry} />)
+				}
+				{
+					websitesEntries.length > 6 && (
+						<CardViewMore
+							href="/projects/websites"
+							text="View More Websites"
+							icon={ArrowCircleRight}
+						/>
+					)
+				}
+			</div>
+		</section>
 	</div>
-</section>
+</div>

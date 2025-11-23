@@ -1,5 +1,8 @@
 name: deploy website
-on: [ push ]
+on:
+  push:
+    branches:
+      - develop
 
 jobs:
   deploy:
@@ -8,18 +11,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          run_install: false
-
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
 
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
       - name: Install dependencies
         run: pnpm install
+
+      - name: Run lint
+        run: pnpm lint
 
       - name: Build
         run: pnpm build

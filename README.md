@@ -1,5 +1,7 @@
 # Personal Portfolio – Astro Website
 
+![Portfolio Screenshot](./public/og-default.png)
+
 ## 📌 Project Overview
 
 This repository contains the source code for my personal portfolio website built with **Astro**. It is a fast,

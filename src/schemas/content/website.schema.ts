@@ -1,7 +1,7 @@
 import { StringNoNSchema } from '@schemas/string.ts'
 import { reference, z } from 'astro:content'
 
-const ImagePath = '/projects/websites/'
+const ImagePath = '/src/assets/projects/websites/'
 
 export const WebsiteCollectionsSchema = z.object({
 	name: StringNoNSchema,

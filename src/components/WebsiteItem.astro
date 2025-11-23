@@ -3,6 +3,7 @@ import { getCollection, z } from 'astro:content'
 import { type CollectionEntry } from 'astro:content'
 import { Picture } from 'astro:assets'
 import type { SvgComponent } from 'astro/types'
+import type { ImageMetadata } from 'astro'
 
 import { getValuesBy } from '@utils/getValuesBy.ts'
 
@@ -17,9 +18,14 @@ type Props = z.infer<typeof Schema>
 
 const { entry } = Schema.parse(Astro.props as Props)
 const { data } = entry
-const { name, shortDescription, videoId, videoThumbnail, backgroundImage, url, technologies } = data
+const { name, shortDescription, videoId, backgroundImage, url, technologies } = data
 
-const getAllLogos = import.meta.glob(`/src/assets/logos/**/*.{svg,png}`, { eager: true })
+const getAllLogos = import.meta.glob(`/src/assets/logos/**/*.svg`, { eager: true })
+const getAllImages = import.meta.glob<{ default: ImageMetadata }>(
+	`/src/assets/projects/websites/**/*.{png,jpg,jpeg,webp}`,
+	{ eager: true }
+)
+
 const logoEntries = await getCollection(technologies[0].collection, ({ id: logoId }) =>
 	getValuesBy(technologies, 'id').includes(logoId)
 )
@@ -31,17 +37,14 @@ const logoEntries = await getCollection(technologies[0].collection, ({ id: logoI
 		title={name}
 	>
 		<Picture
-			src={backgroundImage}
+			src={getAllImages[backgroundImage].default}
 			alt={name + ' - ' + shortDescription}
 			width={480}
 			height={270}
 			class="absolute top-0 left-0 h-full w-full object-cover object-center opacity-50 grayscale transition-all transition-discrete group-hover:opacity-100 group-hover:filter-none"
 		/>
 
-		<Video
-			videoId={videoId}
-			thumbnail={videoThumbnail}
-		/>
+		<Video videoId={videoId} />
 
 		<div class="z-1 flex flex-wrap items-center justify-center">
 			{

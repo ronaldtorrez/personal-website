@@ -37,7 +37,7 @@
 	}
 
 	section:not(.no-styles) {
-		@apply flex w-full flex-col gap-8 px-6 py-20 md:px-20;
+		@apply flex w-full flex-col gap-8 px-6 py-20 md:px-20 md:py-30;
 	}
 
 	ol {
@@ -120,9 +120,9 @@
 	h6 {
 		@apply leading-normal font-extrabold md:leading-tight;
 	}
-}
 
-html,
-body {
-	@apply text-primary bg-light text-lg leading-relaxed font-medium;
+	html,
+	body {
+		@apply text-primary bg-background text-lg leading-relaxed font-medium;
+	}
 }

@@ -17,11 +17,11 @@ export default defineConfig({
 	},
 
 	integrations: [
-		playformCompress(),
 		astroLLMsGenerator(),
 		sitemap({
 			customPages: [`${SITE_URL}/llms.txt`, `${SITE_URL}/llms-small.txt`, `${SITE_URL}/llms-full.txt`]
 		}),
-		mdx()
+		mdx(),
+		playformCompress()
 	]
 })

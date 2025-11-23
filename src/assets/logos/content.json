@@ -499,6 +499,26 @@
 				"secondary": "#1E1E1E"
 			},
 			"website": "https://www.wordfence.com/"
+		},
+		{
+			"name": "Advanced Custom Fields",
+			"slug": "acf",
+			"files": { "default": "acf.svg" },
+			"colors": {
+				"primary": "#058BD5",
+				"secondary": "#002448"
+			},
+			"website": "https://www.advancedcustomfields.com/"
+		},
+		{
+			"name": "Avada",
+			"slug": "avada",
+			"files": { "default": "avada.svg" },
+			"colors": {
+				"primary": "#65bd7d",
+				"secondary": "#282828"
+			},
+			"website": "https://avada.com/"
 		}
 	]
 }

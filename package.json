@@ -1,7 +1,7 @@
 {
 	"name": "personal-website",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"env:dev": "doppler run -p personal-website -c dev",
 		"env:prod": "doppler run -p personal-website -c prd",
@@ -68,5 +68,57 @@
 			"@commitlint/config-conventional"
 		]
 	},
-	"packageManager": "pnpm@10.22.0"
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"trailingComma": "none",
+		"arrowParens": "avoid",
+		"singleAttributePerLine": true,
+		"plugins": [
+			"prettier-plugin-astro",
+			"prettier-plugin-css-order",
+			"prettier-plugin-organize-attributes",
+			"prettier-plugin-organize-imports",
+			"prettier-plugin-sort-imports",
+			"prettier-plugin-tailwindcss"
+		],
+		"overrides": [
+			{
+				"files": "*.astro",
+				"options": {
+					"parser": "astro"
+				}
+			}
+		]
+	},
+	"engines": {
+		"node": ">=24.11.0"
+	},
+	"packageManager": "pnpm@10.23.0",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"@tailwindcss/oxide",
+			"@vercel/speed-insights",
+			"esbuild",
+			"sharp"
+		]
+	},
+	"keywords": [
+		"porfolio",
+		"blog",
+		"personal website",
+		"ronald torrez"
+	],
+	"config": {
+		"siteURL": "https://ronaldtorrez.com",
+		"siteName": "Ronald Torrez",
+		"siteDescription": "Ronald Torrez's personal website and blog about web development, programming, and technology.",
+		"siteAuthor": "Ronald Torrez",
+		"siteLocale": "en_US",
+		"siteImage": "/og-image.png"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ronaldtorrez/personal-website.git"
+	}
 }

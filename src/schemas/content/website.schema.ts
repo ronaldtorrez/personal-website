@@ -4,8 +4,7 @@ import { reference, z } from 'astro:content'
 const ImagePath = '/projects/websites/'
 
 export const WebsiteCollectionsSchema = z.object({
-	title: StringNoNSchema,
-	description: StringNoNSchema,
+	name: StringNoNSchema,
 	shortDescription: StringNoNSchema.optional(),
 	date: z.coerce.date(),
 	videoId: StringNoNSchema,
